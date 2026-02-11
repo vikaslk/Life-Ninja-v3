@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Life Ninja V2.14.2 - Sync Protection</title>
+    <title>Life Ninja V2.15.0 - Bug Fixes</title>
     <script src="https://cdn.tailwindcss.com"></script>
     
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
@@ -254,7 +254,7 @@
         };
         
         console.log('═══════════════════════════════════════════════');
-        console.log('🚀 VERSION: V2.14.2-SYNC-PROTECTION-FEB01 🚀');
+        console.log('🚀 VERSION: V2.15.0-BUG-FIXES-FEB11 🚀');
         console.log('');
         console.log('🛡️ CRITICAL PROTECTION:');
         console.log('✅ Real-time persona sync PROTECTED!');
@@ -287,22 +287,33 @@
         // ============================================================================
 
         // Date helpers
+        // V2.15.0: Parse date-only ISO strings (YYYY-MM-DD) as LOCAL midnight to avoid
+        // off-by-one day errors in IST and other UTC+ timezones. new Date("YYYY-MM-DD")
+        // treats the string as UTC midnight, which shifts back a day for UTC+ users.
+        const parseDateLocal = (date) => {
+            if (!date) return null;
+            if (typeof date === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(date)) {
+                const [y, m, d] = date.split('-');
+                return new Date(Number(y), Number(m) - 1, Number(d));
+            }
+            return new Date(date);
+        };
+
         const formatDate = (date) => {
             if (!date) return null;
-            const d = new Date(date);
+            const d = parseDateLocal(date);
             // Use local timezone instead of UTC
             const year = d.getFullYear();
             const month = String(d.getMonth() + 1).padStart(2, '0');
             const day = String(d.getDate()).padStart(2, '0');
             return `${year}-${month}-${day}`;
         };
-        
+
         // NEW: Format date for display (DD/MM/YYYY)
         const formatDateDisplay = (date) => {
             if (!date) return null;
-            // Handle ISO string dates (from Supabase)
-            const d = typeof date === 'string' ? new Date(date) : date;
-            // V2.14.2: Use LOCAL timezone, not UTC!
+            // V2.15.0: Use parseDateLocal to avoid UTC off-by-one in IST timezone
+            const d = parseDateLocal(date);
             const day = String(d.getDate()).padStart(2, '0');
             const month = String(d.getMonth() + 1).padStart(2, '0');
             const year = d.getFullYear();
@@ -311,13 +322,15 @@
 
         const parseDate = (dateStr) => {
             if (!dateStr) return null;
-            return new Date(dateStr);
+            // V2.15.0: Use parseDateLocal to avoid UTC off-by-one in IST timezone
+            return parseDateLocal(dateStr);
         };
 
         const isSameDay = (date1, date2) => {
             if (!date1 || !date2) return false;
-            const d1 = new Date(date1);
-            const d2 = new Date(date2);
+            // V2.15.0: Use parseDateLocal to avoid UTC off-by-one in IST timezone
+            const d1 = parseDateLocal(date1);
+            const d2 = parseDateLocal(date2);
             return d1.getFullYear() === d2.getFullYear() &&
                    d1.getMonth() === d2.getMonth() &&
                    d1.getDate() === d2.getDate();
@@ -1488,32 +1501,35 @@
                         },
                         (payload) => {
                             console.log('👤 Personas change detected from real-time');
-                            
+
                             if (payload.new && payload.new.personas && Array.isArray(payload.new.personas)) {
                                 const remotePersonas = payload.new.personas;
+                                // V2.15.0: Read from ref to avoid stale closure (personas state was
+                                // captured at subscription time and would never update in this callback)
+                                const currentPersonas = personasRef.current;
                                 console.log(`📥 Remote personas (${remotePersonas.length}):`, remotePersonas);
-                                console.log(`💻 Local personas (${personas.length}):`, personas);
-                                
+                                console.log(`💻 Local personas (${currentPersonas.length}):`, currentPersonas);
+
                                 // V2.14.2: SMART MERGE - Don't blindly overwrite!
                                 // If remote has MORE personas, use remote (additions from other device)
                                 // If local has MORE personas, KEEP local (we're adding right now!)
                                 // If same count, use remote (updates from other device)
-                                
-                                if (remotePersonas.length > personas.length) {
+
+                                if (remotePersonas.length > currentPersonas.length) {
                                     console.log('✅ Remote has MORE personas - accepting update');
                                     justLoadedPersonasRef.current = true; // Prevent save loop
                                     setPersonas(remotePersonas);
-                                } else if (remotePersonas.length < personas.length) {
+                                } else if (remotePersonas.length < currentPersonas.length) {
                                     console.log('⚠️ Remote has FEWER personas - KEEPING local (we may be adding)');
                                     console.log('   This prevents data loss from race conditions!');
                                     // DON'T update - local is ahead
                                 } else {
                                     // Same count - check if actually different
-                                    const localSet = new Set(personas);
+                                    const localSet = new Set(currentPersonas);
                                     const remoteSet = new Set(remotePersonas);
-                                    const areDifferent = personas.some(p => !remoteSet.has(p)) || 
+                                    const areDifferent = currentPersonas.some(p => !remoteSet.has(p)) ||
                                                         remotePersonas.some(p => !localSet.has(p));
-                                    
+
                                     if (areDifferent) {
                                         console.log('✅ Same count but different personas - accepting update');
                                         justLoadedPersonasRef.current = true;
@@ -2085,8 +2101,11 @@
                 }
             ]);
             
-            // V2.12.5: Personas now sync via Supabase settings! (was localStorage only)  
+            // V2.12.5: Personas now sync via Supabase settings! (was localStorage only)
             const [personas, setPersonas] = useState(['The Self', 'Healthcare Professional', 'Entrepreneur']);
+            // V2.15.0: Keep a ref in sync so real-time callbacks always read the latest value
+            const personasRef = useRef(personas);
+            useEffect(() => { personasRef.current = personas; }, [personas]);
             
             // V2.12.5: Load projects from Supabase
             useEffect(() => {
@@ -2301,25 +2320,29 @@
             
             // V2.14.1: Track if we just loaded personas (prevent immediate save race condition!)
             const justLoadedPersonasRef = useRef(false);
-            
+            // V2.15.0: Debounce ref to prevent rapid successive saves to Supabase
+            const personasSaveDebounceRef = useRef(null);
+
             // V2.12.7: Save personas to Supabase when they change
             useEffect(() => {
                 if (!user || personas.length === 0) return;
-                
+
                 // V2.14.1: Skip save if we JUST loaded from Supabase (prevents data loss!)
                 if (justLoadedPersonasRef.current) {
                     console.log('⏭️ Skipping save - just loaded from Supabase');
                     justLoadedPersonasRef.current = false; // Reset flag
                     return;
                 }
-                
-                const savePersonas = async () => {
+
+                // V2.15.0: Debounce — only fire after 500ms of no further changes
+                if (personasSaveDebounceRef.current) clearTimeout(personasSaveDebounceRef.current);
+                personasSaveDebounceRef.current = setTimeout(async () => {
                     try {
                         const deviceId = getDeviceId();
                         const timestamp = new Date().toISOString();
                         console.log(`💾 [${deviceId}] Saving ${personas.length} personas to Supabase:`, personas);
                         console.log(`   Timestamp: ${timestamp}`);
-                        
+
                         const { error } = await supabase
                             .from('settings')
                             .upsert({
@@ -2334,11 +2357,11 @@
                             }, {
                                 onConflict: 'user_id'
                             });
-                        
+
                         if (error) throw error;
-                        
+
                         console.log(`✅ [${deviceId}] Personas saved to Supabase successfully`);
-                        
+
                     } catch (error) {
                         console.error('❌ Error saving personas:', error);
                         if (error.code === '42P10') {
@@ -2353,9 +2376,9 @@
                             showToast('Error saving personas', false);
                         }
                     }
-                };
-                
-                savePersonas();
+                }, 500);
+
+                return () => clearTimeout(personasSaveDebounceRef.current);
             }, [personas, user]);
             
             const [customLists, setCustomLists] = useStickyState([], 'ln_customLists');
@@ -6324,21 +6347,18 @@
                 // V2.13.0: Search now from parent (with sessionStorage persistence!)
                 const newTaskInputRef = useRef(null);
                 const searchInputRef = useRef(null);
-                const isTypingInSearchRef = useRef(false); // V2.14.2: Track if actively typing
-                const lastSearchUpdateRef = useRef(Date.now());
+                const isTypingInSearchRef = useRef(false); // V2.15.0: Track if actively typing
                 
-                // V2.14.2: Maintain focus while actively typing in search
+                // V2.15.0: Maintain focus while actively typing in search.
+                // Removed the 100ms time-window check — it was a race condition with React's
+                // async render cycle. We now rely solely on the isTypingInSearchRef flag.
                 useEffect(() => {
-                    // If we're actively typing (within 100ms of last update), restore focus
-                    const timeSinceUpdate = Date.now() - lastSearchUpdateRef.current;
-                    if (isTypingInSearchRef.current && timeSinceUpdate < 100 && searchInputRef.current) {
-                        // Check if focus was lost
-                        if (document.activeElement !== searchInputRef.current) {
-                            console.log('🔍 Restoring search focus (actively typing)');
-                            const cursorPos = searchInputRef.current.value.length;
-                            searchInputRef.current.focus();
-                            searchInputRef.current.setSelectionRange(cursorPos, cursorPos);
-                        }
+                    if (isTypingInSearchRef.current && searchInputRef.current &&
+                        document.activeElement !== searchInputRef.current) {
+                        console.log('🔍 Restoring search focus (actively typing)');
+                        const cursorPos = searchInputRef.current.value.length;
+                        searchInputRef.current.focus();
+                        searchInputRef.current.setSelectionRange(cursorPos, cursorPos);
                     }
                 }, [searchQuery]); // Run when searchQuery changes
                 
@@ -6470,16 +6490,15 @@
                                             isTypingInSearchRef.current = false;
                                         }}
                                         onChange={(e) => {
-                                            // V2.14.2: Track typing activity
-                                            lastSearchUpdateRef.current = Date.now();
+                                            // V2.15.0: Track typing activity
                                             isTypingInSearchRef.current = true;
                                             // V2.12.2.12: Simple controlled input - just update state!
                                             setSearchQuery(e.target.value);
-                                            
-                                            // Clear typing flag after brief delay
+
+                                            // V2.15.0: Extended to 300ms to safely cover React render cycle
                                             setTimeout(() => {
                                                 isTypingInSearchRef.current = false;
-                                            }, 150);
+                                            }, 300);
                                         }}
                                         onKeyDown={(e) => {
                                             // V2.13.0: ESC key - clear search and focus task field
@@ -7445,7 +7464,8 @@
                     const tasksWithDates = allTasks.filter(t => t.scheduledDate);
                     if (tasksWithDates.length === 0) return [today];
                     
-                    const allDates = tasksWithDates.map(t => new Date(t.scheduledDate));
+                    // V2.15.0: Use parseDateLocal to avoid UTC off-by-one in IST timezone
+                    const allDates = tasksWithDates.map(t => parseDateLocal(t.scheduledDate));
                     const minDate = new Date(Math.min(...allDates));
                     const maxDate = new Date(Math.max(...allDates));
                     maxDate.setDate(maxDate.getDate() + 7); // Add week buffer
@@ -10020,7 +10040,7 @@
                         <div className="text-center">
                             <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-indigo-600 mx-auto mb-4"></div>
                             <p className="text-gray-600">Loading Life Ninja...</p>
-                            <p className="text-gray-400 text-sm mt-2">V2.14.2</p>
+                            <p className="text-gray-400 text-sm mt-2">V2.15.0</p>
                         </div>
                     </div>
                 );
@@ -10034,8 +10054,8 @@
                             <div className="text-center mb-8">
                                 <Target className="text-indigo-600 mx-auto mb-4" size={48} />
                                 <h1 className="text-3xl font-bold text-gray-900 mb-2">Life Ninja</h1>
-                                <p className="text-xl font-bold text-indigo-600 mb-1">V2.14.2</p>
-                                <p className="text-gray-600 text-sm">Sync Protection!</p>
+                                <p className="text-xl font-bold text-indigo-600 mb-1">V2.15.0</p>
+                                <p className="text-gray-600 text-sm">Bug Fixes</p>
                             </div>
                             
                             <div className="mb-6">
@@ -10146,7 +10166,7 @@
                                 <div className="flex items-center gap-3">
                                     <Target className="text-indigo-600" size={32} />
                                     <h1 className="text-2xl font-bold text-gray-900">Life Ninja</h1>
-                                    <span className="text-sm bg-orange-600 text-white px-3 py-1 rounded-full font-bold">V2.14.2</span>
+                                    <span className="text-sm bg-orange-600 text-white px-3 py-1 rounded-full font-bold">V2.15.0</span>
                                 </div>
 
                                 <div className="flex items-center gap-4">

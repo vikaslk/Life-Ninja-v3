@@ -1,0 +1,2607 @@
+(index):64 cdn.tailwindcss.com should not be used in production. To use Tailwind CSS in production, install it as a PostCSS plugin or use the Tailwind CLI: https://tailwindcss.com/docs/installation
+(anonymous) @ (index):64
+(anonymous) @ (index):64
+Life-Ninja-v3/:27 You are using the in-browser Babel transformer. Be sure to precompile your scripts for production - https://babeljs.io/docs/setup/
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ transformScriptTags.ts:271
+VEe @ index.ts:277
+WEe @ index.ts:261
+index.ts:107 [BABEL] Note: The code generator has deoptimised the styling of /Inline Babel script as it exceeds the max of 500KB.
+hk @ index.ts:107
+bk @ index.ts:297
+bV @ generate.ts:35
+(anonymous) @ index.ts:62
+(anonymous) @ babel.min.js:3
+(anonymous) @ babel.min.js:3
+(anonymous) @ babel.min.js:3
+(anonymous) @ babel.min.js:3
+iF @ index.js:251
+sync @ index.js:89
+stopHiding - secret - don't use this - v1 @ rewrite-stack-trace.ts:99
+SV @ transform.ts:66
+FEe @ index.ts:179
+(anonymous) @ transformScriptTags.ts:53
+SEe @ transformScriptTags.ts:120
+n @ transformScriptTags.ts:193
+PEe @ transformScriptTags.ts:240
+(anonymous) @ transformScriptTags.ts:276
+VEe @ index.ts:277
+WEe @ index.ts:261
+Inline Babel script:66 ═══════════════════════════════════════════════
+Inline Babel script:67 🚀 VERSION: V2.15.3-SEARCH-NO-BLUR-NO-EFFECT-FEB12 🚀
+Inline Babel script:68 
+Inline Babel script:69 🛡️ CRITICAL PROTECTION:
+Inline Babel script:70 ✅ Real-time persona sync PROTECTED!
+Inline Babel script:71    - Smart merge logic
+Inline Babel script:72    - Keeps local if more personas
+Inline Babel script:73    - Prevents data loss from race conditions
+Inline Babel script:74 
+Inline Babel script:75 ✅ Search focus V2.15.3 fix applied!
+Inline Babel script:76    - Removed reactive useEffect([tasks.length]) — was firing on every Supabase sync
+Inline Babel script:77    - Removed onBlur from search — React fires spurious blur during reconciliation
+Inline Babel script:78    - searchHasFocusRef cleared only by task input onFocus (real user action)
+Inline Babel script:79 
+Inline Babel script:80 ✅ Timezone fixed!
+Inline Babel script:81    - Uses local timezone for dates
+Inline Babel script:82    - Created date shows correctly
+Inline Babel script:83 
+Inline Babel script:84 ✅ Device tracking added!
+Inline Babel script:85    - All saves track device ID
+Inline Babel script:86    - Better debugging
+Inline Babel script:87 
+Inline Babel script:88 🎯 V2.14.1 FIXES INCLUDED:
+Inline Babel script:89 ✅ Personas sync race condition fixed
+Inline Babel script:90 ✅ ESC in QuickEdit modal
+Inline Babel script:91 ═══════════════════════════════════════════════
+Inline Babel script:92 🖥️ Device detected: Desktop
+Inline Babel script:94 ✅ Supabase ready
+Inline Babel script:572 ✅ Already synced - skipping migration check
+Inline Babel script:939 🔔 Setting up real-time subscriptions...
+Inline Babel script:1777 🔄 Loading lists from Supabase (user logged in)
+Inline Babel script:1737 📥 Loading lists from Supabase...
+Inline Babel script:1786 📡 V2.7.1: Setting up custom_lists real-time subscription
+Inline Babel script:1927 🔄 Loading projects from Supabase (user logged in)
+Inline Babel script:1939 📦 Found 4 projects in localStorage
+Inline Babel script:2027 🔄 Loading personas from Supabase settings
+Inline Babel script:2038 📦 Found 5 personas in localStorage
+Inline Babel script:1366 🔌 Unsubscribing from real-time channels
+Inline Babel script:1109 📡 [2026-02-12T14:56:58.328Z] Tasks subscription status: CLOSED
+Life-Ninja-v3/:27 🔌 Real-time sync CLOSED - connection ended
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1125
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+t @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+unsubscribe @ supabase.js:3
+(anonymous) @ Inline Babel script:1368
+If @ react-dom.production.min.js:161
+Gc @ react-dom.production.min.js:164
+Xb @ react-dom.production.min.js:199
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Inline Babel script:1214 📡 [2026-02-12T14:56:58.329Z] Events subscription status: CLOSED
+Life-Ninja-v3/:27 🔌 Events sync CLOSED - connection ended
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1224
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+t @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+unsubscribe @ supabase.js:3
+(anonymous) @ Inline Babel script:1369
+If @ react-dom.production.min.js:161
+Gc @ react-dom.production.min.js:164
+Xb @ react-dom.production.min.js:199
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Inline Babel script:1294 📡 [2026-02-12T14:56:58.331Z] Projects subscription status: CLOSED
+Inline Babel script:1298 🔌 Projects sync CLOSED - connection ended
+Inline Babel script:1356 📡 [2026-02-12T14:56:58.331Z] Personas subscription status: CLOSED
+Inline Babel script:1360 🔌 Personas sync CLOSED - connection ended
+Inline Babel script:1881 🔌 Unsubscribing from lists channel
+Inline Babel script:1866 📡 [2026-02-12T14:56:58.332Z] Lists subscription status: CLOSED
+Life-Ninja-v3/:27 🔌 Lists sync CLOSED - connection ended
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1875
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+t @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+unsubscribe @ supabase.js:3
+(anonymous) @ Inline Babel script:1882
+If @ react-dom.production.min.js:161
+Gc @ react-dom.production.min.js:164
+Xb @ react-dom.production.min.js:199
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Inline Babel script:572 ✅ Already synced - skipping migration check
+Inline Babel script:939 🔔 Setting up real-time subscriptions...
+Inline Babel script:1777 🔄 Loading lists from Supabase (user logged in)
+Inline Babel script:1737 📥 Loading lists from Supabase...
+Inline Babel script:1786 📡 V2.7.1: Setting up custom_lists real-time subscription
+Inline Babel script:1927 🔄 Loading projects from Supabase (user logged in)
+Inline Babel script:1939 📦 Found 4 projects in localStorage
+Inline Babel script:2027 🔄 Loading personas from Supabase settings
+Inline Babel script:2038 📦 Found 5 personas in localStorage
+Inline Babel script:1366 🔌 Unsubscribing from real-time channels
+Inline Babel script:1109 📡 [2026-02-12T14:56:58.347Z] Tasks subscription status: CLOSED
+Life-Ninja-v3/:27 🔌 Real-time sync CLOSED - connection ended
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1125
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+t @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+unsubscribe @ supabase.js:3
+(anonymous) @ Inline Babel script:1368
+If @ react-dom.production.min.js:161
+Gc @ react-dom.production.min.js:164
+Xb @ react-dom.production.min.js:199
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Inline Babel script:1214 📡 [2026-02-12T14:56:58.347Z] Events subscription status: CLOSED
+Life-Ninja-v3/:27 🔌 Events sync CLOSED - connection ended
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1224
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+t @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+unsubscribe @ supabase.js:3
+(anonymous) @ Inline Babel script:1369
+If @ react-dom.production.min.js:161
+Gc @ react-dom.production.min.js:164
+Xb @ react-dom.production.min.js:199
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Inline Babel script:1294 📡 [2026-02-12T14:56:58.348Z] Projects subscription status: CLOSED
+Inline Babel script:1298 🔌 Projects sync CLOSED - connection ended
+Inline Babel script:1356 📡 [2026-02-12T14:56:58.348Z] Personas subscription status: CLOSED
+Inline Babel script:1360 🔌 Personas sync CLOSED - connection ended
+Inline Babel script:1881 🔌 Unsubscribing from lists channel
+Inline Babel script:1866 📡 [2026-02-12T14:56:58.349Z] Lists subscription status: CLOSED
+Life-Ninja-v3/:27 🔌 Lists sync CLOSED - connection ended
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1875
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+t @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+unsubscribe @ supabase.js:3
+(anonymous) @ Inline Babel script:1882
+If @ react-dom.production.min.js:161
+Gc @ react-dom.production.min.js:164
+Xb @ react-dom.production.min.js:199
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Inline Babel script:572 ✅ Already synced - skipping migration check
+Inline Babel script:939 🔔 Setting up real-time subscriptions...
+Inline Babel script:1777 🔄 Loading lists from Supabase (user logged in)
+Inline Babel script:1737 📥 Loading lists from Supabase...
+Inline Babel script:1786 📡 V2.7.1: Setting up custom_lists real-time subscription
+Inline Babel script:1927 🔄 Loading projects from Supabase (user logged in)
+Inline Babel script:1939 📦 Found 4 projects in localStorage
+Inline Babel script:2027 🔄 Loading personas from Supabase settings
+Inline Babel script:2038 📦 Found 5 personas in localStorage
+Inline Babel script:2061 ✅ Loaded personas from Supabase: {personas: Array(3)}
+Inline Babel script:2100 ✅ Using 3 personas from Supabase
+Inline Babel script:2122 ✅ Personas sync complete
+Inline Babel script:2143 ⏭️ Skipping save - just loaded from Supabase
+Inline Babel script:1109 📡 [2026-02-12T14:56:58.568Z] Tasks subscription status: SUBSCRIBED
+Inline Babel script:1113 ✅ Real-time sync CONNECTED
+Inline Babel script:1214 📡 [2026-02-12T14:56:58.569Z] Events subscription status: SUBSCRIBED
+Inline Babel script:1218 ✅ Events sync CONNECTED
+Inline Babel script:1294 📡 [2026-02-12T14:56:58.570Z] Projects subscription status: SUBSCRIBED
+Inline Babel script:1296 ✅ Projects sync CONNECTED
+Inline Babel script:1356 📡 [2026-02-12T14:56:58.570Z] Personas subscription status: SUBSCRIBED
+Inline Babel script:1358 ✅ Personas sync CONNECTED
+Inline Babel script:1750 ✅ Loaded 3 lists from Supabase
+Inline Babel script:1766 ✅ Lists loaded, Supabase is source of truth
+Inline Babel script:1954 ✅ Loaded 6 projects from Supabase
+Inline Babel script:2010 ✅ Projects sync complete
+Inline Babel script:1866 📡 [2026-02-12T14:56:58.607Z] Lists subscription status: SUBSCRIBED
+Inline Babel script:1869 ✅ Lists sync CONNECTED
+Inline Babel script:2061 ✅ Loaded personas from Supabase: {personas: Array(3)}
+Inline Babel script:2100 ✅ Using 3 personas from Supabase
+Inline Babel script:2122 ✅ Personas sync complete
+Inline Babel script:2143 ⏭️ Skipping save - just loaded from Supabase
+Inline Babel script:1954 ✅ Loaded 6 projects from Supabase
+Inline Babel script:2010 ✅ Projects sync complete
+Inline Babel script:1750 ✅ Loaded 3 lists from Supabase
+Inline Babel script:1766 ✅ Lists loaded, Supabase is source of truth
+Inline Babel script:769 ✅ Loaded tasks from Supabase: 106
+Inline Babel script:835 ✅ Manual order detected, enabled manual order mode
+Inline Babel script:846 ✅ Sync complete, Supabase is source of truth
+Inline Babel script:2061 ✅ Loaded personas from Supabase: {personas: Array(3)}
+Inline Babel script:2100 ✅ Using 3 personas from Supabase
+Inline Babel script:2122 ✅ Personas sync complete
+Inline Babel script:1483 ✅ Loaded events from Supabase: 0
+Inline Babel script:1515 ✅ Events sync complete
+Inline Babel script:2143 ⏭️ Skipping save - just loaded from Supabase
+Inline Babel script:1750 ✅ Loaded 3 lists from Supabase
+Inline Babel script:1766 ✅ Lists loaded, Supabase is source of truth
+Inline Babel script:1954 ✅ Loaded 6 projects from Supabase
+Inline Babel script:2010 ✅ Projects sync complete
+Inline Babel script:6261 🔍 Search focused - disabling rapid entry
+Inline Babel script:6261 🔍 Search focused - disabling rapid entry
+Inline Babel script:6261 🔍 Search focused - disabling rapid entry
+Inline Babel script:6261 🔍 Search focused - disabling rapid entry
+Inline Babel script:6261 🔍 Search focused - disabling rapid entry
+Inline Babel script:6261 🔍 Search focused - disabling rapid entry
+Inline Babel script:6261 🔍 Search focused - disabling rapid entry
+Inline Babel script:6261 🔍 Search focused - disabling rapid entry
+Inline Babel script:6261 🔍 Search focused - disabling rapid entry
+Inline Babel script:6261 🔍 Search focused - disabling rapid entry
+Inline Babel script:2471 🔇 Toast suppressed - rapid entry in progress
+Inline Babel script:711 ✅ Task saved to Supabase: 726
+Inline Babel script:953 📥 Tasks change detected: INSERT
+Inline Babel script:956 🔍 INSERT EVENT RECEIVED
+Inline Babel script:957 🔍 payload.new.text: Rapid typing tasks 01
+Inline Babel script:963 🔍 isCreatingTasksRef: true
+Inline Babel script:964 🔍 timeSinceLastCreation: 456 ms
+Inline Babel script:965 🔍 isRapidEntry: true
+Inline Babel script:968 ⏭️ ✅ SKIPPING INSERT - user is in rapid task entry mode
+Inline Babel script:2471 🔇 Toast suppressed - rapid entry in progress
+Inline Babel script:711 ✅ Task saved to Supabase: 727
+Inline Babel script:953 📥 Tasks change detected: INSERT
+Inline Babel script:956 🔍 INSERT EVENT RECEIVED
+Inline Babel script:957 🔍 payload.new.text: Rapid typing tasks 02
+Inline Babel script:963 🔍 isCreatingTasksRef: true
+Inline Babel script:964 🔍 timeSinceLastCreation: 282 ms
+Inline Babel script:965 🔍 isRapidEntry: true
+Inline Babel script:968 ⏭️ ✅ SKIPPING INSERT - user is in rapid task entry mode
+Inline Babel script:1231 💓 [2026-02-12T14:57:58.623Z] Connection heartbeat - monitoring active
+Inline Babel script:1231 💓 [2026-02-12T14:58:58.630Z] Connection heartbeat - monitoring active
+Inline Babel script:1366 🔌 Unsubscribing from real-time channels
+Inline Babel script:1109 📡 [2026-02-12T14:59:05.266Z] Tasks subscription status: CLOSED
+Life-Ninja-v3/:27 🔌 Real-time sync CLOSED - connection ended
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1125
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+t @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+unsubscribe @ supabase.js:3
+(anonymous) @ Inline Babel script:1368
+If @ react-dom.production.min.js:161
+Gc @ react-dom.production.min.js:164
+Xb @ react-dom.production.min.js:199
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Inline Babel script:1214 📡 [2026-02-12T14:59:05.266Z] Events subscription status: CLOSED
+Life-Ninja-v3/:27 🔌 Events sync CLOSED - connection ended
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1224
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+t @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+unsubscribe @ supabase.js:3
+(anonymous) @ Inline Babel script:1369
+If @ react-dom.production.min.js:161
+Gc @ react-dom.production.min.js:164
+Xb @ react-dom.production.min.js:199
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Inline Babel script:1294 📡 [2026-02-12T14:59:05.266Z] Projects subscription status: CLOSED
+Inline Babel script:1298 🔌 Projects sync CLOSED - connection ended
+Inline Babel script:1356 📡 [2026-02-12T14:59:05.267Z] Personas subscription status: CLOSED
+Inline Babel script:1360 🔌 Personas sync CLOSED - connection ended
+Inline Babel script:1881 🔌 Unsubscribing from lists channel
+Inline Babel script:1866 📡 [2026-02-12T14:59:05.267Z] Lists subscription status: CLOSED
+Life-Ninja-v3/:27 🔌 Lists sync CLOSED - connection ended
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1875
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+t @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+unsubscribe @ supabase.js:3
+(anonymous) @ Inline Babel script:1882
+If @ react-dom.production.min.js:161
+Gc @ react-dom.production.min.js:164
+Xb @ react-dom.production.min.js:199
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Inline Babel script:572 ✅ Already synced - skipping migration check
+Inline Babel script:939 🔔 Setting up real-time subscriptions...
+Inline Babel script:1777 🔄 Loading lists from Supabase (user logged in)
+Inline Babel script:1737 📥 Loading lists from Supabase...
+Inline Babel script:1786 📡 V2.7.1: Setting up custom_lists real-time subscription
+Inline Babel script:1927 🔄 Loading projects from Supabase (user logged in)
+Inline Babel script:1939 📦 Found 4 projects in localStorage
+Inline Babel script:2027 🔄 Loading personas from Supabase settings
+Inline Babel script:2038 📦 Found 5 personas in localStorage
+Inline Babel script:1109 📡 [2026-02-12T14:59:05.322Z] Tasks subscription status: SUBSCRIBED
+Inline Babel script:1113 ✅ Real-time sync CONNECTED
+Inline Babel script:1214 📡 [2026-02-12T14:59:05.325Z] Events subscription status: SUBSCRIBED
+Inline Babel script:1218 ✅ Events sync CONNECTED
+Inline Babel script:1294 📡 [2026-02-12T14:59:05.329Z] Projects subscription status: SUBSCRIBED
+Inline Babel script:1296 ✅ Projects sync CONNECTED
+Inline Babel script:1356 📡 [2026-02-12T14:59:05.333Z] Personas subscription status: SUBSCRIBED
+Inline Babel script:1358 ✅ Personas sync CONNECTED
+Inline Babel script:1866 📡 [2026-02-12T14:59:05.353Z] Lists subscription status: SUBSCRIBED
+Inline Babel script:1869 ✅ Lists sync CONNECTED
+Inline Babel script:2154 💾 [Desktop] Saving 3 personas to Supabase: (3) ['The Self', 'Healthcare Professional', 'Entrepreneur']
+Inline Babel script:2155    Timestamp: 2026-02-12T14:59:05.782Z
+Inline Babel script:1954 ✅ Loaded 6 projects from Supabase
+Inline Babel script:2010 ✅ Projects sync complete
+Inline Babel script:2174 ✅ [Desktop] Personas saved to Supabase successfully
+Inline Babel script:2061 ✅ Loaded personas from Supabase: {personas: Array(3)}
+Inline Babel script:2100 ✅ Using 3 personas from Supabase
+Inline Babel script:2122 ✅ Personas sync complete
+Inline Babel script:1750 ✅ Loaded 3 lists from Supabase
+Inline Babel script:1766 ✅ Lists loaded, Supabase is source of truth
+Inline Babel script:2143 ⏭️ Skipping save - just loaded from Supabase
+Inline Babel script:6261 🔍 Search focused - disabling rapid entry
+Inline Babel script:1366 🔌 Unsubscribing from real-time channels
+Inline Babel script:1109 📡 [2026-02-12T14:59:41.732Z] Tasks subscription status: CLOSED
+Life-Ninja-v3/:27 🔌 Real-time sync CLOSED - connection ended
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1125
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+t @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+unsubscribe @ supabase.js:3
+(anonymous) @ Inline Babel script:1368
+If @ react-dom.production.min.js:161
+Gc @ react-dom.production.min.js:164
+Xb @ react-dom.production.min.js:199
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Inline Babel script:1214 📡 [2026-02-12T14:59:41.732Z] Events subscription status: CLOSED
+Life-Ninja-v3/:27 🔌 Events sync CLOSED - connection ended
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1224
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+t @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+unsubscribe @ supabase.js:3
+(anonymous) @ Inline Babel script:1369
+If @ react-dom.production.min.js:161
+Gc @ react-dom.production.min.js:164
+Xb @ react-dom.production.min.js:199
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Inline Babel script:1294 📡 [2026-02-12T14:59:41.733Z] Projects subscription status: CLOSED
+Inline Babel script:1298 🔌 Projects sync CLOSED - connection ended
+Inline Babel script:1356 📡 [2026-02-12T14:59:41.733Z] Personas subscription status: CLOSED
+Inline Babel script:1360 🔌 Personas sync CLOSED - connection ended
+Inline Babel script:1881 🔌 Unsubscribing from lists channel
+Inline Babel script:1866 📡 [2026-02-12T14:59:41.733Z] Lists subscription status: CLOSED
+Life-Ninja-v3/:27 🔌 Lists sync CLOSED - connection ended
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1875
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+t @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+unsubscribe @ supabase.js:3
+(anonymous) @ Inline Babel script:1882
+If @ react-dom.production.min.js:161
+Gc @ react-dom.production.min.js:164
+Xb @ react-dom.production.min.js:199
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Inline Babel script:572 ✅ Already synced - skipping migration check
+Inline Babel script:939 🔔 Setting up real-time subscriptions...
+Inline Babel script:1777 🔄 Loading lists from Supabase (user logged in)
+Inline Babel script:1737 📥 Loading lists from Supabase...
+Inline Babel script:1786 📡 V2.7.1: Setting up custom_lists real-time subscription
+Inline Babel script:1927 🔄 Loading projects from Supabase (user logged in)
+Inline Babel script:1939 📦 Found 4 projects in localStorage
+Inline Babel script:2027 🔄 Loading personas from Supabase settings
+Inline Babel script:2038 📦 Found 5 personas in localStorage
+Inline Babel script:1109 📡 [2026-02-12T14:59:41.783Z] Tasks subscription status: SUBSCRIBED
+Inline Babel script:1113 ✅ Real-time sync CONNECTED
+Inline Babel script:1214 📡 [2026-02-12T14:59:41.788Z] Events subscription status: SUBSCRIBED
+Inline Babel script:1218 ✅ Events sync CONNECTED
+Inline Babel script:1294 📡 [2026-02-12T14:59:41.788Z] Projects subscription status: SUBSCRIBED
+Inline Babel script:1296 ✅ Projects sync CONNECTED
+Inline Babel script:1356 📡 [2026-02-12T14:59:41.791Z] Personas subscription status: SUBSCRIBED
+Inline Babel script:1358 ✅ Personas sync CONNECTED
+Inline Babel script:1866 📡 [2026-02-12T14:59:41.794Z] Lists subscription status: SUBSCRIBED
+Inline Babel script:1869 ✅ Lists sync CONNECTED
+Inline Babel script:1954 ✅ Loaded 6 projects from Supabase
+Inline Babel script:2010 ✅ Projects sync complete
+Inline Babel script:2061 ✅ Loaded personas from Supabase: {personas: Array(3)}
+Inline Babel script:2100 ✅ Using 3 personas from Supabase
+Inline Babel script:2122 ✅ Personas sync complete
+Inline Babel script:1750 ✅ Loaded 3 lists from Supabase
+Inline Babel script:1766 ✅ Lists loaded, Supabase is source of truth
+Inline Babel script:2143 ⏭️ Skipping save - just loaded from Supabase
+Inline Babel script:1231 💓 [2026-02-12T15:00:42.642Z] Connection heartbeat - monitoring active
+Inline Babel script:1231 💓 [2026-02-12T15:01:42.627Z] Connection heartbeat - monitoring active
+Inline Babel script:1231 💓 [2026-02-12T15:02:42.624Z] Connection heartbeat - monitoring active
+Inline Babel script:1231 💓 [2026-02-12T15:03:42.627Z] Connection heartbeat - monitoring active
+Inline Babel script:1231 💓 [2026-02-12T15:04:42.625Z] Connection heartbeat - monitoring active
+Inline Babel script:1231 💓 [2026-02-12T15:05:42.632Z] Connection heartbeat - monitoring active
+Inline Babel script:1231 💓 [2026-02-12T15:06:45.639Z] Connection heartbeat - monitoring active
+Inline Babel script:1231 💓 [2026-02-12T15:07:45.669Z] Connection heartbeat - monitoring active
+Inline Babel script:1231 💓 [2026-02-12T15:08:45.638Z] Connection heartbeat - monitoring active
+Inline Babel script:1231 💓 [2026-02-12T15:09:45.637Z] Connection heartbeat - monitoring active
+Inline Babel script:1109 📡 [2026-02-12T15:14:39.584Z] Tasks subscription status: CHANNEL_ERROR
+Inline Babel script:1119 ❌ Real-time sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1119
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+_triggerChanError @ supabase.js:14
+_onConnClose @ supabase.js:14
+conn.conn.onclose @ supabase.js:14
+Inline Babel script:1214 📡 [2026-02-12T15:14:39.591Z] Events subscription status: CHANNEL_ERROR
+Inline Babel script:1220 ❌ Events sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1220
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+_triggerChanError @ supabase.js:14
+_onConnClose @ supabase.js:14
+conn.conn.onclose @ supabase.js:14
+Inline Babel script:1294 📡 [2026-02-12T15:14:39.591Z] Projects subscription status: CHANNEL_ERROR
+Inline Babel script:1356 📡 [2026-02-12T15:14:39.591Z] Personas subscription status: CHANNEL_ERROR
+Inline Babel script:1866 📡 [2026-02-12T15:14:39.592Z] Lists subscription status: CHANNEL_ERROR
+Inline Babel script:1871 ❌ Lists sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1871
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+_triggerChanError @ supabase.js:14
+_onConnClose @ supabase.js:14
+conn.conn.onclose @ supabase.js:14
+Inline Babel script:1231 💓 [2026-02-12T15:14:39.957Z] Connection heartbeat - monitoring active
+Life-Ninja-v3/:27 ⚠️ Tasks subscription state: errored
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1235
+setInterval
+(anonymous) @ Inline Babel script:1229
+Id @ react-dom.production.min.js:165
+Xb @ react-dom.production.min.js:200
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Life-Ninja-v3/:27 ⚠️ Events subscription state: errored
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1238
+setInterval
+(anonymous) @ Inline Babel script:1229
+Id @ react-dom.production.min.js:165
+Xb @ react-dom.production.min.js:200
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Inline Babel script:1231 💓 [2026-02-12T15:33:07.393Z] Connection heartbeat - monitoring active
+Life-Ninja-v3/:27 ⚠️ Tasks subscription state: errored
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1235
+setInterval
+(anonymous) @ Inline Babel script:1229
+Id @ react-dom.production.min.js:165
+Xb @ react-dom.production.min.js:200
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Life-Ninja-v3/:27 ⚠️ Events subscription state: errored
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1238
+setInterval
+(anonymous) @ Inline Babel script:1229
+Id @ react-dom.production.min.js:165
+Xb @ react-dom.production.min.js:200
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Inline Babel script:1109 📡 [2026-02-12T15:33:15.515Z] Tasks subscription status: CHANNEL_ERROR
+Inline Babel script:1119 ❌ Real-time sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1119
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1214 📡 [2026-02-12T15:33:15.516Z] Events subscription status: CHANNEL_ERROR
+Inline Babel script:1220 ❌ Events sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1220
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1294 📡 [2026-02-12T15:33:15.517Z] Projects subscription status: CHANNEL_ERROR
+Inline Babel script:1356 📡 [2026-02-12T15:33:15.517Z] Personas subscription status: CHANNEL_ERROR
+Inline Babel script:1866 📡 [2026-02-12T15:33:15.519Z] Lists subscription status: CHANNEL_ERROR
+Inline Babel script:1871 ❌ Lists sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1871
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1109 📡 [2026-02-12T15:33:26.519Z] Tasks subscription status: CHANNEL_ERROR
+Inline Babel script:1119 ❌ Real-time sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1119
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1214 📡 [2026-02-12T15:33:26.521Z] Events subscription status: CHANNEL_ERROR
+Inline Babel script:1220 ❌ Events sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1220
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1294 📡 [2026-02-12T15:33:26.522Z] Projects subscription status: CHANNEL_ERROR
+Inline Babel script:1356 📡 [2026-02-12T15:33:26.524Z] Personas subscription status: CHANNEL_ERROR
+Inline Babel script:1866 📡 [2026-02-12T15:33:26.532Z] Lists subscription status: CHANNEL_ERROR
+Inline Babel script:1871 ❌ Lists sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1871
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1109 📡 [2026-02-12T15:33:37.508Z] Tasks subscription status: CHANNEL_ERROR
+Inline Babel script:1119 ❌ Real-time sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1119
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1214 📡 [2026-02-12T15:33:37.512Z] Events subscription status: CHANNEL_ERROR
+Inline Babel script:1220 ❌ Events sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1220
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1294 📡 [2026-02-12T15:33:37.513Z] Projects subscription status: CHANNEL_ERROR
+Inline Babel script:1356 📡 [2026-02-12T15:33:37.516Z] Personas subscription status: CHANNEL_ERROR
+Inline Babel script:1866 📡 [2026-02-12T15:33:37.518Z] Lists subscription status: CHANNEL_ERROR
+Inline Babel script:1871 ❌ Lists sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1871
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1231 💓 [2026-02-12T15:33:43.457Z] Connection heartbeat - monitoring active
+Life-Ninja-v3/:27 ⚠️ Tasks subscription state: errored
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1235
+setInterval
+(anonymous) @ Inline Babel script:1229
+Id @ react-dom.production.min.js:165
+Xb @ react-dom.production.min.js:200
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Life-Ninja-v3/:27 ⚠️ Events subscription state: errored
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1238
+setInterval
+(anonymous) @ Inline Babel script:1229
+Id @ react-dom.production.min.js:165
+Xb @ react-dom.production.min.js:200
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Inline Babel script:1109 📡 [2026-02-12T15:33:48.508Z] Tasks subscription status: CHANNEL_ERROR
+Inline Babel script:1119 ❌ Real-time sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1119
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1214 📡 [2026-02-12T15:33:48.509Z] Events subscription status: CHANNEL_ERROR
+Inline Babel script:1220 ❌ Events sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1220
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1294 📡 [2026-02-12T15:33:48.511Z] Projects subscription status: CHANNEL_ERROR
+Inline Babel script:1356 📡 [2026-02-12T15:33:48.513Z] Personas subscription status: CHANNEL_ERROR
+Inline Babel script:1866 📡 [2026-02-12T15:33:48.516Z] Lists subscription status: CHANNEL_ERROR
+Inline Babel script:1871 ❌ Lists sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1871
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1109 📡 [2026-02-12T15:33:59.505Z] Tasks subscription status: CHANNEL_ERROR
+Inline Babel script:1119 ❌ Real-time sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1119
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1214 📡 [2026-02-12T15:33:59.507Z] Events subscription status: CHANNEL_ERROR
+Inline Babel script:1220 ❌ Events sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1220
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1294 📡 [2026-02-12T15:33:59.510Z] Projects subscription status: CHANNEL_ERROR
+Inline Babel script:1356 📡 [2026-02-12T15:33:59.717Z] Personas subscription status: CHANNEL_ERROR
+Inline Babel script:1866 📡 [2026-02-12T15:33:59.719Z] Lists subscription status: CHANNEL_ERROR
+Inline Babel script:1871 ❌ Lists sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1871
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1109 📡 [2026-02-12T15:34:08.029Z] Tasks subscription status: CHANNEL_ERROR
+Inline Babel script:1119 ❌ Real-time sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1119
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1214 📡 [2026-02-12T15:34:08.031Z] Events subscription status: CHANNEL_ERROR
+Inline Babel script:1220 ❌ Events sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1220
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1294 📡 [2026-02-12T15:34:08.033Z] Projects subscription status: CHANNEL_ERROR
+Inline Babel script:1356 📡 [2026-02-12T15:34:08.035Z] Personas subscription status: CHANNEL_ERROR
+Inline Babel script:1866 📡 [2026-02-12T15:34:08.038Z] Lists subscription status: CHANNEL_ERROR
+Inline Babel script:1871 ❌ Lists sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1871
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1109 📡 [2026-02-12T15:34:19.040Z] Tasks subscription status: CHANNEL_ERROR
+Inline Babel script:1119 ❌ Real-time sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1119
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1214 📡 [2026-02-12T15:34:19.041Z] Events subscription status: CHANNEL_ERROR
+Inline Babel script:1220 ❌ Events sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1220
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1294 📡 [2026-02-12T15:34:19.044Z] Projects subscription status: CHANNEL_ERROR
+Inline Babel script:1356 📡 [2026-02-12T15:34:19.047Z] Personas subscription status: CHANNEL_ERROR
+Inline Babel script:1866 📡 [2026-02-12T15:34:19.079Z] Lists subscription status: CHANNEL_ERROR
+Inline Babel script:1871 ❌ Lists sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1871
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1109 📡 [2026-02-12T15:34:30.026Z] Tasks subscription status: CHANNEL_ERROR
+Inline Babel script:1119 ❌ Real-time sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1119
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1214 📡 [2026-02-12T15:34:30.028Z] Events subscription status: CHANNEL_ERROR
+Inline Babel script:1220 ❌ Events sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1220
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1294 📡 [2026-02-12T15:34:30.030Z] Projects subscription status: CHANNEL_ERROR
+Inline Babel script:1356 📡 [2026-02-12T15:34:30.032Z] Personas subscription status: CHANNEL_ERROR
+Inline Babel script:1866 📡 [2026-02-12T15:34:30.036Z] Lists subscription status: CHANNEL_ERROR
+Inline Babel script:1871 ❌ Lists sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1871
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1231 💓 [2026-02-12T15:34:41.030Z] Connection heartbeat - monitoring active
+Life-Ninja-v3/:27 ⚠️ Tasks subscription state: errored
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1235
+setInterval
+(anonymous) @ Inline Babel script:1229
+Id @ react-dom.production.min.js:165
+Xb @ react-dom.production.min.js:200
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Life-Ninja-v3/:27 ⚠️ Events subscription state: errored
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1238
+setInterval
+(anonymous) @ Inline Babel script:1229
+Id @ react-dom.production.min.js:165
+Xb @ react-dom.production.min.js:200
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Inline Babel script:1109 📡 [2026-02-12T15:34:41.091Z] Tasks subscription status: CHANNEL_ERROR
+Inline Babel script:1119 ❌ Real-time sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1119
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1214 📡 [2026-02-12T15:34:41.118Z] Events subscription status: CHANNEL_ERROR
+Inline Babel script:1220 ❌ Events sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1220
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1294 📡 [2026-02-12T15:34:41.119Z] Projects subscription status: CHANNEL_ERROR
+Inline Babel script:1356 📡 [2026-02-12T15:34:41.120Z] Personas subscription status: CHANNEL_ERROR
+Inline Babel script:1866 📡 [2026-02-12T15:34:41.123Z] Lists subscription status: CHANNEL_ERROR
+Inline Babel script:1871 ❌ Lists sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1871
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1109 📡 [2026-02-12T15:34:52.041Z] Tasks subscription status: CHANNEL_ERROR
+Inline Babel script:1119 ❌ Real-time sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1119
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1214 📡 [2026-02-12T15:34:52.043Z] Events subscription status: CHANNEL_ERROR
+Inline Babel script:1220 ❌ Events sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1220
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1294 📡 [2026-02-12T15:34:52.066Z] Projects subscription status: CHANNEL_ERROR
+Inline Babel script:1356 📡 [2026-02-12T15:34:52.071Z] Personas subscription status: CHANNEL_ERROR
+Inline Babel script:1866 📡 [2026-02-12T15:34:52.072Z] Lists subscription status: CHANNEL_ERROR
+Inline Babel script:1871 ❌ Lists sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1871
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1109 📡 [2026-02-12T15:35:03.031Z] Tasks subscription status: CHANNEL_ERROR
+Inline Babel script:1119 ❌ Real-time sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1119
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1214 📡 [2026-02-12T15:35:03.034Z] Events subscription status: CHANNEL_ERROR
+Inline Babel script:1220 ❌ Events sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1220
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1294 📡 [2026-02-12T15:35:03.035Z] Projects subscription status: CHANNEL_ERROR
+Inline Babel script:1356 📡 [2026-02-12T15:35:03.044Z] Personas subscription status: CHANNEL_ERROR
+Inline Babel script:1866 📡 [2026-02-12T15:35:03.045Z] Lists subscription status: CHANNEL_ERROR
+Inline Babel script:1871 ❌ Lists sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1871
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1109 📡 [2026-02-12T15:35:14.047Z] Tasks subscription status: CHANNEL_ERROR
+Inline Babel script:1119 ❌ Real-time sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1119
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1214 📡 [2026-02-12T15:35:14.050Z] Events subscription status: CHANNEL_ERROR
+Inline Babel script:1220 ❌ Events sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1220
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1294 📡 [2026-02-12T15:35:14.052Z] Projects subscription status: CHANNEL_ERROR
+Inline Babel script:1356 📡 [2026-02-12T15:35:14.056Z] Personas subscription status: CHANNEL_ERROR
+Inline Babel script:1866 📡 [2026-02-12T15:35:14.061Z] Lists subscription status: CHANNEL_ERROR
+Inline Babel script:1871 ❌ Lists sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1871
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1109 📡 [2026-02-12T15:35:25.044Z] Tasks subscription status: CHANNEL_ERROR
+Inline Babel script:1119 ❌ Real-time sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1119
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1214 📡 [2026-02-12T15:35:25.058Z] Events subscription status: CHANNEL_ERROR
+Inline Babel script:1220 ❌ Events sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1220
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1294 📡 [2026-02-12T15:35:25.060Z] Projects subscription status: CHANNEL_ERROR
+Inline Babel script:1356 📡 [2026-02-12T15:35:25.061Z] Personas subscription status: CHANNEL_ERROR
+Inline Babel script:1866 📡 [2026-02-12T15:35:25.062Z] Lists subscription status: CHANNEL_ERROR
+Inline Babel script:1871 ❌ Lists sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1871
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1109 📡 [2026-02-12T15:35:36.036Z] Tasks subscription status: CHANNEL_ERROR
+Inline Babel script:1119 ❌ Real-time sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1119
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1214 📡 [2026-02-12T15:35:36.038Z] Events subscription status: CHANNEL_ERROR
+Inline Babel script:1220 ❌ Events sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1220
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1294 📡 [2026-02-12T15:35:36.040Z] Projects subscription status: CHANNEL_ERROR
+Inline Babel script:1356 📡 [2026-02-12T15:35:36.041Z] Personas subscription status: CHANNEL_ERROR
+Inline Babel script:1866 📡 [2026-02-12T15:35:36.043Z] Lists subscription status: CHANNEL_ERROR
+Inline Babel script:1871 ❌ Lists sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1871
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1231 💓 [2026-02-12T15:35:41.036Z] Connection heartbeat - monitoring active
+Life-Ninja-v3/:27 ⚠️ Tasks subscription state: errored
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1235
+setInterval
+(anonymous) @ Inline Babel script:1229
+Id @ react-dom.production.min.js:165
+Xb @ react-dom.production.min.js:200
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Life-Ninja-v3/:27 ⚠️ Events subscription state: errored
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1238
+setInterval
+(anonymous) @ Inline Babel script:1229
+Id @ react-dom.production.min.js:165
+Xb @ react-dom.production.min.js:200
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Inline Babel script:1109 📡 [2026-02-12T15:35:47.045Z] Tasks subscription status: CHANNEL_ERROR
+Inline Babel script:1119 ❌ Real-time sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1119
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1214 📡 [2026-02-12T15:35:47.046Z] Events subscription status: CHANNEL_ERROR
+Inline Babel script:1220 ❌ Events sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1220
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1294 📡 [2026-02-12T15:35:47.054Z] Projects subscription status: CHANNEL_ERROR
+Inline Babel script:1356 📡 [2026-02-12T15:35:47.055Z] Personas subscription status: CHANNEL_ERROR
+Inline Babel script:1866 📡 [2026-02-12T15:35:47.055Z] Lists subscription status: CHANNEL_ERROR
+Inline Babel script:1871 ❌ Lists sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1871
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1109 📡 [2026-02-12T15:35:58.068Z] Tasks subscription status: CHANNEL_ERROR
+Inline Babel script:1119 ❌ Real-time sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1119
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1214 📡 [2026-02-12T15:35:58.069Z] Events subscription status: CHANNEL_ERROR
+Inline Babel script:1220 ❌ Events sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1220
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1294 📡 [2026-02-12T15:35:58.075Z] Projects subscription status: CHANNEL_ERROR
+Inline Babel script:1356 📡 [2026-02-12T15:35:58.076Z] Personas subscription status: CHANNEL_ERROR
+Inline Babel script:1866 📡 [2026-02-12T15:35:58.077Z] Lists subscription status: CHANNEL_ERROR
+Inline Babel script:1871 ❌ Lists sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1871
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1109 📡 [2026-02-12T15:36:09.029Z] Tasks subscription status: CHANNEL_ERROR
+Inline Babel script:1119 ❌ Real-time sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1119
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1214 📡 [2026-02-12T15:36:09.040Z] Events subscription status: CHANNEL_ERROR
+Inline Babel script:1220 ❌ Events sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1220
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1294 📡 [2026-02-12T15:36:09.042Z] Projects subscription status: CHANNEL_ERROR
+Inline Babel script:1356 📡 [2026-02-12T15:36:09.043Z] Personas subscription status: CHANNEL_ERROR
+Inline Babel script:1866 📡 [2026-02-12T15:36:09.044Z] Lists subscription status: CHANNEL_ERROR
+Inline Babel script:1871 ❌ Lists sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1871
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1109 📡 [2026-02-12T15:36:20.039Z] Tasks subscription status: CHANNEL_ERROR
+Inline Babel script:1119 ❌ Real-time sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1119
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1214 📡 [2026-02-12T15:36:20.041Z] Events subscription status: CHANNEL_ERROR
+Inline Babel script:1220 ❌ Events sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1220
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1294 📡 [2026-02-12T15:36:20.043Z] Projects subscription status: CHANNEL_ERROR
+Inline Babel script:1356 📡 [2026-02-12T15:36:20.045Z] Personas subscription status: CHANNEL_ERROR
+Inline Babel script:1866 📡 [2026-02-12T15:36:20.048Z] Lists subscription status: CHANNEL_ERROR
+Inline Babel script:1871 ❌ Lists sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1871
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1109 📡 [2026-02-12T15:36:31.044Z] Tasks subscription status: CHANNEL_ERROR
+Inline Babel script:1119 ❌ Real-time sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1119
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1214 📡 [2026-02-12T15:36:31.046Z] Events subscription status: CHANNEL_ERROR
+Inline Babel script:1220 ❌ Events sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1220
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1294 📡 [2026-02-12T15:36:31.051Z] Projects subscription status: CHANNEL_ERROR
+Inline Babel script:1356 📡 [2026-02-12T15:36:31.053Z] Personas subscription status: CHANNEL_ERROR
+Inline Babel script:1866 📡 [2026-02-12T15:36:31.054Z] Lists subscription status: CHANNEL_ERROR
+Inline Babel script:1871 ❌ Lists sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1871
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1231 💓 [2026-02-12T15:36:41.008Z] Connection heartbeat - monitoring active
+Life-Ninja-v3/:27 ⚠️ Tasks subscription state: errored
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1235
+setInterval
+(anonymous) @ Inline Babel script:1229
+Id @ react-dom.production.min.js:165
+Xb @ react-dom.production.min.js:200
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Life-Ninja-v3/:27 ⚠️ Events subscription state: errored
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1238
+setInterval
+(anonymous) @ Inline Babel script:1229
+Id @ react-dom.production.min.js:165
+Xb @ react-dom.production.min.js:200
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Inline Babel script:1109 📡 [2026-02-12T15:36:42.033Z] Tasks subscription status: CHANNEL_ERROR
+Inline Babel script:1119 ❌ Real-time sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1119
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1214 📡 [2026-02-12T15:36:42.037Z] Events subscription status: CHANNEL_ERROR
+Inline Babel script:1220 ❌ Events sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1220
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1294 📡 [2026-02-12T15:36:42.039Z] Projects subscription status: CHANNEL_ERROR
+Inline Babel script:1356 📡 [2026-02-12T15:36:42.041Z] Personas subscription status: CHANNEL_ERROR
+Inline Babel script:1866 📡 [2026-02-12T15:36:42.044Z] Lists subscription status: CHANNEL_ERROR
+Inline Babel script:1871 ❌ Lists sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1871
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1109 📡 [2026-02-12T15:36:53.068Z] Tasks subscription status: CHANNEL_ERROR
+Inline Babel script:1119 ❌ Real-time sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1119
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1214 📡 [2026-02-12T15:36:53.088Z] Events subscription status: CHANNEL_ERROR
+Inline Babel script:1220 ❌ Events sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1220
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1294 📡 [2026-02-12T15:36:53.089Z] Projects subscription status: CHANNEL_ERROR
+Inline Babel script:1356 📡 [2026-02-12T15:36:53.123Z] Personas subscription status: CHANNEL_ERROR
+Inline Babel script:1866 📡 [2026-02-12T15:36:53.124Z] Lists subscription status: CHANNEL_ERROR
+Inline Babel script:1871 ❌ Lists sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1871
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1109 📡 [2026-02-12T15:37:04.034Z] Tasks subscription status: CHANNEL_ERROR
+Inline Babel script:1119 ❌ Real-time sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1119
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1214 📡 [2026-02-12T15:37:04.037Z] Events subscription status: CHANNEL_ERROR
+Inline Babel script:1220 ❌ Events sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1220
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1294 📡 [2026-02-12T15:37:04.039Z] Projects subscription status: CHANNEL_ERROR
+Inline Babel script:1356 📡 [2026-02-12T15:37:04.041Z] Personas subscription status: CHANNEL_ERROR
+Inline Babel script:1866 📡 [2026-02-12T15:37:04.041Z] Lists subscription status: CHANNEL_ERROR
+Inline Babel script:1871 ❌ Lists sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1871
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1109 📡 [2026-02-12T15:37:15.042Z] Tasks subscription status: CHANNEL_ERROR
+Inline Babel script:1119 ❌ Real-time sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1119
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1214 📡 [2026-02-12T15:37:15.045Z] Events subscription status: CHANNEL_ERROR
+Inline Babel script:1220 ❌ Events sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1220
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1294 📡 [2026-02-12T15:37:15.058Z] Projects subscription status: CHANNEL_ERROR
+Inline Babel script:1356 📡 [2026-02-12T15:37:15.060Z] Personas subscription status: CHANNEL_ERROR
+Inline Babel script:1866 📡 [2026-02-12T15:37:15.063Z] Lists subscription status: CHANNEL_ERROR
+Inline Babel script:1871 ❌ Lists sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1871
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1109 📡 [2026-02-12T15:37:26.057Z] Tasks subscription status: CHANNEL_ERROR
+Inline Babel script:1119 ❌ Real-time sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1119
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1214 📡 [2026-02-12T15:37:26.068Z] Events subscription status: CHANNEL_ERROR
+Inline Babel script:1220 ❌ Events sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1220
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1294 📡 [2026-02-12T15:37:26.070Z] Projects subscription status: CHANNEL_ERROR
+Inline Babel script:1356 📡 [2026-02-12T15:37:26.071Z] Personas subscription status: CHANNEL_ERROR
+Inline Babel script:1866 📡 [2026-02-12T15:37:26.071Z] Lists subscription status: CHANNEL_ERROR
+Inline Babel script:1871 ❌ Lists sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1871
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1109 📡 [2026-02-12T15:37:37.052Z] Tasks subscription status: CHANNEL_ERROR
+Inline Babel script:1119 ❌ Real-time sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1119
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1214 📡 [2026-02-12T15:37:37.054Z] Events subscription status: CHANNEL_ERROR
+Inline Babel script:1220 ❌ Events sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1220
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1294 📡 [2026-02-12T15:37:37.055Z] Projects subscription status: CHANNEL_ERROR
+Inline Babel script:1356 📡 [2026-02-12T15:37:37.057Z] Personas subscription status: CHANNEL_ERROR
+Inline Babel script:1866 📡 [2026-02-12T15:37:37.060Z] Lists subscription status: CHANNEL_ERROR
+Inline Babel script:1871 ❌ Lists sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1871
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1231 💓 [2026-02-12T15:37:41.028Z] Connection heartbeat - monitoring active
+Life-Ninja-v3/:27 ⚠️ Tasks subscription state: errored
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1235
+setInterval
+(anonymous) @ Inline Babel script:1229
+Id @ react-dom.production.min.js:165
+Xb @ react-dom.production.min.js:200
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Life-Ninja-v3/:27 ⚠️ Events subscription state: errored
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1238
+setInterval
+(anonymous) @ Inline Babel script:1229
+Id @ react-dom.production.min.js:165
+Xb @ react-dom.production.min.js:200
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Inline Babel script:1109 📡 [2026-02-12T15:37:48.034Z] Tasks subscription status: CHANNEL_ERROR
+Inline Babel script:1119 ❌ Real-time sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1119
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1214 📡 [2026-02-12T15:37:48.038Z] Events subscription status: CHANNEL_ERROR
+Inline Babel script:1220 ❌ Events sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1220
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1294 📡 [2026-02-12T15:37:48.039Z] Projects subscription status: CHANNEL_ERROR
+Inline Babel script:1356 📡 [2026-02-12T15:37:48.041Z] Personas subscription status: CHANNEL_ERROR
+Inline Babel script:1866 📡 [2026-02-12T15:37:48.043Z] Lists subscription status: CHANNEL_ERROR
+Inline Babel script:1871 ❌ Lists sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1871
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1109 📡 [2026-02-12T15:37:59.027Z] Tasks subscription status: CHANNEL_ERROR
+Inline Babel script:1119 ❌ Real-time sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1119
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1214 📡 [2026-02-12T15:37:59.030Z] Events subscription status: CHANNEL_ERROR
+Inline Babel script:1220 ❌ Events sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1220
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1294 📡 [2026-02-12T15:37:59.033Z] Projects subscription status: CHANNEL_ERROR
+Inline Babel script:1356 📡 [2026-02-12T15:37:59.036Z] Personas subscription status: CHANNEL_ERROR
+Inline Babel script:1866 📡 [2026-02-12T15:37:59.038Z] Lists subscription status: CHANNEL_ERROR
+Inline Babel script:1871 ❌ Lists sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1871
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1109 📡 [2026-02-12T15:38:10.041Z] Tasks subscription status: CHANNEL_ERROR
+Inline Babel script:1119 ❌ Real-time sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1119
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1214 📡 [2026-02-12T15:38:10.043Z] Events subscription status: CHANNEL_ERROR
+Inline Babel script:1220 ❌ Events sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1220
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1294 📡 [2026-02-12T15:38:10.048Z] Projects subscription status: CHANNEL_ERROR
+Inline Babel script:1356 📡 [2026-02-12T15:38:10.061Z] Personas subscription status: CHANNEL_ERROR
+Inline Babel script:1866 📡 [2026-02-12T15:38:10.065Z] Lists subscription status: CHANNEL_ERROR
+Inline Babel script:1871 ❌ Lists sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1871
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1109 📡 [2026-02-12T15:38:21.041Z] Tasks subscription status: CHANNEL_ERROR
+Inline Babel script:1119 ❌ Real-time sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1119
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1214 📡 [2026-02-12T15:38:21.044Z] Events subscription status: CHANNEL_ERROR
+Inline Babel script:1220 ❌ Events sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1220
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1294 📡 [2026-02-12T15:38:21.046Z] Projects subscription status: CHANNEL_ERROR
+Inline Babel script:1356 📡 [2026-02-12T15:38:21.052Z] Personas subscription status: CHANNEL_ERROR
+Inline Babel script:1866 📡 [2026-02-12T15:38:21.059Z] Lists subscription status: CHANNEL_ERROR
+Inline Babel script:1871 ❌ Lists sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1871
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1109 📡 [2026-02-12T15:38:32.031Z] Tasks subscription status: CHANNEL_ERROR
+Inline Babel script:1119 ❌ Real-time sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1119
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1214 📡 [2026-02-12T15:38:32.034Z] Events subscription status: CHANNEL_ERROR
+Inline Babel script:1220 ❌ Events sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1220
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1294 📡 [2026-02-12T15:38:32.036Z] Projects subscription status: CHANNEL_ERROR
+Inline Babel script:1356 📡 [2026-02-12T15:38:32.042Z] Personas subscription status: CHANNEL_ERROR
+Inline Babel script:1866 📡 [2026-02-12T15:38:32.043Z] Lists subscription status: CHANNEL_ERROR
+Inline Babel script:1871 ❌ Lists sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1871
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1231 💓 [2026-02-12T15:38:41.000Z] Connection heartbeat - monitoring active
+Life-Ninja-v3/:27 ⚠️ Tasks subscription state: errored
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1235
+setInterval
+(anonymous) @ Inline Babel script:1229
+Id @ react-dom.production.min.js:165
+Xb @ react-dom.production.min.js:200
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Life-Ninja-v3/:27 ⚠️ Events subscription state: errored
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1238
+setInterval
+(anonymous) @ Inline Babel script:1229
+Id @ react-dom.production.min.js:165
+Xb @ react-dom.production.min.js:200
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Inline Babel script:1109 📡 [2026-02-12T15:38:43.036Z] Tasks subscription status: CHANNEL_ERROR
+Inline Babel script:1119 ❌ Real-time sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1119
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1214 📡 [2026-02-12T15:38:43.039Z] Events subscription status: CHANNEL_ERROR
+Inline Babel script:1220 ❌ Events sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1220
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1294 📡 [2026-02-12T15:38:43.041Z] Projects subscription status: CHANNEL_ERROR
+Inline Babel script:1356 📡 [2026-02-12T15:38:43.049Z] Personas subscription status: CHANNEL_ERROR
+Inline Babel script:1866 📡 [2026-02-12T15:38:43.049Z] Lists subscription status: CHANNEL_ERROR
+Inline Babel script:1871 ❌ Lists sync ERROR - connection lost!
+(anonymous) @ Inline Babel script:1871
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+(anonymous) @ supabase.js:14
+(anonymous) @ supabase.js:14
+decode @ supabase.js:3
+_onConnMessage @ supabase.js:14
+conn.conn.onmessage @ supabase.js:14
+Inline Babel script:1366 🔌 Unsubscribing from real-time channels
+Inline Babel script:1109 📡 [2026-02-12T15:38:47.550Z] Tasks subscription status: CLOSED
+Life-Ninja-v3/:27 🔌 Real-time sync CLOSED - connection ended
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1125
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+t @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+unsubscribe @ supabase.js:3
+(anonymous) @ Inline Babel script:1368
+If @ react-dom.production.min.js:161
+Gc @ react-dom.production.min.js:164
+Xb @ react-dom.production.min.js:199
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Inline Babel script:1214 📡 [2026-02-12T15:38:47.551Z] Events subscription status: CLOSED
+Life-Ninja-v3/:27 🔌 Events sync CLOSED - connection ended
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1224
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+t @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+unsubscribe @ supabase.js:3
+(anonymous) @ Inline Babel script:1369
+If @ react-dom.production.min.js:161
+Gc @ react-dom.production.min.js:164
+Xb @ react-dom.production.min.js:199
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Inline Babel script:1294 📡 [2026-02-12T15:38:47.552Z] Projects subscription status: CLOSED
+Inline Babel script:1298 🔌 Projects sync CLOSED - connection ended
+Inline Babel script:1356 📡 [2026-02-12T15:38:47.552Z] Personas subscription status: CLOSED
+Inline Babel script:1360 🔌 Personas sync CLOSED - connection ended
+Inline Babel script:1881 🔌 Unsubscribing from lists channel
+Inline Babel script:1866 📡 [2026-02-12T15:38:47.563Z] Lists subscription status: CLOSED
+Life-Ninja-v3/:27 🔌 Lists sync CLOSED - connection ended
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1875
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+t @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+unsubscribe @ supabase.js:3
+(anonymous) @ Inline Babel script:1882
+If @ react-dom.production.min.js:161
+Gc @ react-dom.production.min.js:164
+Xb @ react-dom.production.min.js:199
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Inline Babel script:572 ✅ Already synced - skipping migration check
+Inline Babel script:939 🔔 Setting up real-time subscriptions...
+Inline Babel script:1777 🔄 Loading lists from Supabase (user logged in)
+Inline Babel script:1737 📥 Loading lists from Supabase...
+Inline Babel script:1786 📡 V2.7.1: Setting up custom_lists real-time subscription
+Inline Babel script:1927 🔄 Loading projects from Supabase (user logged in)
+Inline Babel script:1939 📦 Found 4 projects in localStorage
+Inline Babel script:2027 🔄 Loading personas from Supabase settings
+Inline Babel script:2038 📦 Found 5 personas in localStorage
+Inline Babel script:1954 ✅ Loaded 6 projects from Supabase
+Inline Babel script:2010 ✅ Projects sync complete
+Inline Babel script:1109 📡 [2026-02-12T15:38:48.283Z] Tasks subscription status: SUBSCRIBED
+Inline Babel script:1113 ✅ Real-time sync CONNECTED
+Inline Babel script:1115 🔄 Clearing error state, connection restored
+Inline Babel script:1214 📡 [2026-02-12T15:38:48.296Z] Events subscription status: SUBSCRIBED
+Inline Babel script:1218 ✅ Events sync CONNECTED
+Inline Babel script:1294 📡 [2026-02-12T15:38:48.297Z] Projects subscription status: SUBSCRIBED
+Inline Babel script:1296 ✅ Projects sync CONNECTED
+Inline Babel script:1356 📡 [2026-02-12T15:38:48.298Z] Personas subscription status: SUBSCRIBED
+Inline Babel script:1358 ✅ Personas sync CONNECTED
+Inline Babel script:1866 📡 [2026-02-12T15:38:48.298Z] Lists subscription status: SUBSCRIBED
+Inline Babel script:1869 ✅ Lists sync CONNECTED
+Inline Babel script:1750 ✅ Loaded 3 lists from Supabase
+Inline Babel script:1766 ✅ Lists loaded, Supabase is source of truth
+Inline Babel script:2061 ✅ Loaded personas from Supabase: {personas: Array(3)}
+Inline Babel script:2100 ✅ Using 3 personas from Supabase
+Inline Babel script:2122 ✅ Personas sync complete
+Inline Babel script:2143 ⏭️ Skipping save - just loaded from Supabase
+Inline Babel script:1231 💓 [2026-02-12T15:39:47.976Z] Connection heartbeat - monitoring active
+Inline Babel script:1231 💓 [2026-02-12T15:40:47.985Z] Connection heartbeat - monitoring active
+Inline Babel script:1231 💓 [2026-02-12T15:41:47.983Z] Connection heartbeat - monitoring active
+Inline Babel script:1231 💓 [2026-02-12T15:42:47.978Z] Connection heartbeat - monitoring active
+Inline Babel script:1231 💓 [2026-02-12T15:43:47.989Z] Connection heartbeat - monitoring active
+Inline Babel script:1231 💓 [2026-02-12T15:44:47.978Z] Connection heartbeat - monitoring active
+Inline Babel script:1231 💓 [2026-02-12T15:46:40.989Z] Connection heartbeat - monitoring active
+Inline Babel script:1231 💓 [2026-02-12T15:47:40.987Z] Connection heartbeat - monitoring active
+Inline Babel script:1231 💓 [2026-02-12T15:48:00.685Z] Connection heartbeat - monitoring active
+Inline Babel script:1366 🔌 Unsubscribing from real-time channels
+Inline Babel script:1109 📡 [2026-02-12T15:48:00.827Z] Tasks subscription status: CLOSED
+Life-Ninja-v3/:27 🔌 Real-time sync CLOSED - connection ended
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1125
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+t @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+unsubscribe @ supabase.js:3
+(anonymous) @ Inline Babel script:1368
+If @ react-dom.production.min.js:161
+Gc @ react-dom.production.min.js:164
+Xb @ react-dom.production.min.js:199
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Inline Babel script:1214 📡 [2026-02-12T15:48:00.827Z] Events subscription status: CLOSED
+Life-Ninja-v3/:27 🔌 Events sync CLOSED - connection ended
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1224
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+t @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+unsubscribe @ supabase.js:3
+(anonymous) @ Inline Babel script:1369
+If @ react-dom.production.min.js:161
+Gc @ react-dom.production.min.js:164
+Xb @ react-dom.production.min.js:199
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Inline Babel script:1294 📡 [2026-02-12T15:48:00.828Z] Projects subscription status: CLOSED
+Inline Babel script:1298 🔌 Projects sync CLOSED - connection ended
+Inline Babel script:1356 📡 [2026-02-12T15:48:00.828Z] Personas subscription status: CLOSED
+Inline Babel script:1360 🔌 Personas sync CLOSED - connection ended
+Inline Babel script:1881 🔌 Unsubscribing from lists channel
+Inline Babel script:1866 📡 [2026-02-12T15:48:00.829Z] Lists subscription status: CLOSED
+Life-Ninja-v3/:27 🔌 Lists sync CLOSED - connection ended
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1875
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+t @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+unsubscribe @ supabase.js:3
+(anonymous) @ Inline Babel script:1882
+If @ react-dom.production.min.js:161
+Gc @ react-dom.production.min.js:164
+Xb @ react-dom.production.min.js:199
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Inline Babel script:572 ✅ Already synced - skipping migration check
+Inline Babel script:939 🔔 Setting up real-time subscriptions...
+Inline Babel script:1777 🔄 Loading lists from Supabase (user logged in)
+Inline Babel script:1737 📥 Loading lists from Supabase...
+Inline Babel script:1786 📡 V2.7.1: Setting up custom_lists real-time subscription
+Inline Babel script:1927 🔄 Loading projects from Supabase (user logged in)
+Inline Babel script:1939 📦 Found 4 projects in localStorage
+Inline Babel script:2027 🔄 Loading personas from Supabase settings
+Inline Babel script:2038 📦 Found 5 personas in localStorage
+Inline Babel script:1109 📡 [2026-02-12T15:48:00.911Z] Tasks subscription status: SUBSCRIBED
+Inline Babel script:1113 ✅ Real-time sync CONNECTED
+Inline Babel script:1214 📡 [2026-02-12T15:48:00.912Z] Events subscription status: SUBSCRIBED
+Inline Babel script:1218 ✅ Events sync CONNECTED
+Inline Babel script:1294 📡 [2026-02-12T15:48:00.912Z] Projects subscription status: SUBSCRIBED
+Inline Babel script:1296 ✅ Projects sync CONNECTED
+Inline Babel script:1356 📡 [2026-02-12T15:48:00.912Z] Personas subscription status: SUBSCRIBED
+Inline Babel script:1358 ✅ Personas sync CONNECTED
+Inline Babel script:1866 📡 [2026-02-12T15:48:00.913Z] Lists subscription status: SUBSCRIBED
+Inline Babel script:1869 ✅ Lists sync CONNECTED
+Inline Babel script:2154 💾 [Desktop] Saving 3 personas to Supabase: (3) ['The Self', 'Healthcare Professional', 'Entrepreneur']
+Inline Babel script:2155    Timestamp: 2026-02-12T15:48:01.336Z
+Inline Babel script:1954 ✅ Loaded 6 projects from Supabase
+Inline Babel script:2010 ✅ Projects sync complete
+Inline Babel script:2174 ✅ [Desktop] Personas saved to Supabase successfully
+Inline Babel script:2061 ✅ Loaded personas from Supabase: {personas: Array(3)}
+Inline Babel script:2100 ✅ Using 3 personas from Supabase
+Inline Babel script:2122 ✅ Personas sync complete
+Inline Babel script:1750 ✅ Loaded 3 lists from Supabase
+Inline Babel script:1766 ✅ Lists loaded, Supabase is source of truth
+Inline Babel script:2143 ⏭️ Skipping save - just loaded from Supabase
+Inline Babel script:6261 🔍 Search focused - disabling rapid entry
+Inline Babel script:6261 🔍 Search focused - disabling rapid entry
+Inline Babel script:6261 🔍 Search focused - disabling rapid entry
+Inline Babel script:6261 🔍 Search focused - disabling rapid entry
+Inline Babel script:6261 🔍 Search focused - disabling rapid entry

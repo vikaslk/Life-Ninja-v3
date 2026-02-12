@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Life Ninja V2.15.4 - Search Focus Fix (local searchQuery state)</title>
+    <title>Life Ninja V2.15.3 - Search Focus Fix (no onBlur, no reactive useEffect)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
@@ -254,7 +254,7 @@
         };
         
         console.log('═══════════════════════════════════════════════');
-        console.log('🚀 VERSION: V2.15.4-SEARCH-LOCAL-STATE-FEB12 🚀');
+        console.log('🚀 VERSION: V2.15.3-SEARCH-NO-BLUR-NO-EFFECT-FEB12 🚀');
         console.log('');
         console.log('🛡️ CRITICAL PROTECTION:');
         console.log('✅ Real-time persona sync PROTECTED!');
@@ -262,10 +262,10 @@
         console.log('   - Keeps local if more personas');
         console.log('   - Prevents data loss from race conditions');
         console.log('');
-        console.log('✅ Search focus V2.15.4 fix applied!');
-        console.log('   - searchQuery moved to LOCAL state in ListView — no parent re-renders on typing');
-        console.log('   - V2.15.3 log confirmed: onFocus fired 10x per search type (parent re-render was cause)');
-        console.log('   - useEffect([tasks.length]) restored with reliable document.activeElement guard');
+        console.log('✅ Search focus V2.15.3 fix applied!');
+        console.log('   - Removed reactive useEffect([tasks.length]) — was firing on every Supabase sync');
+        console.log('   - Removed onBlur from search — React fires spurious blur during reconciliation');
+        console.log('   - searchHasFocusRef cleared only by task input onFocus (real user action)');
         console.log('');
         console.log('✅ Timezone fixed!');
         console.log('   - Uses local timezone for dates');
@@ -6342,19 +6342,19 @@
             };
 
             // ====== VIEW: LIST VIEW ======
-            const ListView = ({ newTaskTextRef }) => {
+            const ListView = ({ newTaskTextRef, searchQuery, setSearchQuery }) => {
                 // V2.6.3-REF: Use local state for typing (no parent re-renders), persist in ref across unmounts
                 const [newTaskText, setNewTaskText] = useState(() => newTaskTextRef.current || '');
-                // V2.15.4: searchQuery is LOCAL state — prevents parent re-render on every keystroke.
-                // When searchQuery was in parent (LifeNinjaApp), typing → setSearchQuery → parent re-render
-                // → MemoizedListView re-renders (new prop) → React fires onFocus on search input again.
-                // That was the true root cause of the search focus bug (confirmed from V2.15.3 log).
-                // Trade-off: search resets when switching views (acceptable — search is view-local UX).
-                const [searchQuery, setSearchQuery] = useState('');
+                // V2.13.0: Search now from parent (with sessionStorage persistence!)
                 const newTaskInputRef = useRef(null);
                 const searchInputRef = useRef(null);
-
-                // V2.15.4: ListView filters tasks using LOCAL searchQuery (no parent re-renders)!
+                // V2.15.2: Reliable search-focus guard. document.activeElement is unreliable
+                // during React render cycles (Supabase sync causes re-renders that briefly move
+                // activeElement away from the search input). This ref is set/cleared by the
+                // search input's own onFocus/onBlur, which fire from real user actions only.
+                const searchHasFocusRef = useRef(false);
+                
+                // V2.13.0: ListView filters tasks using parent's searchQuery!
                 const filteredTasks = useMemo(() => {
                     let filtered = tasks.filter(task => {
                         // Filter out completion zone tasks
@@ -6409,30 +6409,16 @@
                     return filtered;
                 }, [tasks, searchQuery, showArchived, filterStatus, filterPersona, filterProject, sortBy, isManualOrder]);
                 
-                // V2.15.4: Restored useEffect([tasks.length]) — but now reliable!
-                // With searchQuery as LOCAL state, typing in search no longer re-renders the parent,
-                // so document.activeElement === searchInputRef.current is a reliable check.
-                // Previously (V2.15.0–2.15.3) this was unreliable because parent re-renders during
-                // typing briefly moved activeElement away from the search input, bypassing the guard.
-                // Now that the root cause (parent re-render on type) is fixed, V2.15.1-style guard works.
-                useEffect(() => {
-                    if (isCreatingTasksRef.current && newTaskInputRef.current) {
-                        // Reliable now: no parent re-render during search typing means
-                        // document.activeElement stays on the search input while user types
-                        if (document.activeElement === searchInputRef.current) {
-                            console.log('⛔ [TASK] BLOCKED: User typing in search');
-                            return;
-                        }
-                        // Also block if typing in ANY other input/textarea (modals, etc)
-                        const activeTag = document.activeElement?.tagName?.toLowerCase();
-                        if (activeTag === 'input' || activeTag === 'textarea') {
-                            console.log('⛔ [TASK] BLOCKED: User typing in', activeTag);
-                            return;
-                        }
-                        console.log('✅ [TASK] OK to refocus (rapid entry active)');
-                        newTaskInputRef.current.focus();
-                    }
-                }, [tasks.length]);
+                // V2.12.2.12: NO search focus restoration useEffect!
+                // Search is now local state (like task field) - no parent updates = no re-renders = no focus loss!
+                
+                // V2.15.3: Removed useEffect([tasks.length]) entirely.
+                // That effect fired reactively on every Supabase sync event (INSERT/DELETE changes tasks.length),
+                // causing it to attempt task-input refocus even when the user was typing in search.
+                // All guards (searchHasFocusRef, document.activeElement) were unreliable because React's
+                // reconciliation fires spurious onBlur/onFocus events that cleared the guard before the
+                // effect could check it. The direct focus() calls in the task creation handler are
+                // sufficient — this reactive effect was redundant AND dangerous.
                 
                 // Save to ref before unmount (V2.12.2.2: Don't save empty strings)
                 useEffect(() => {
@@ -6457,15 +6443,20 @@
                                         placeholder="Search tasks..."
                                         value={searchQuery}
                                         onFocus={() => {
-                                            // V2.15.4: searchQuery is now local state, so typing here no longer
-                                            // triggers parent re-renders. document.activeElement stays on the
-                                            // search input reliably — the useEffect([tasks.length]) guard works.
+                                            // V2.15.3: Set search guard ref (never cleared by onBlur — React fires
+                                            // spurious blur events during reconciliation that would clear the guard
+                                            // before shouldFocus() checks it). Instead, the ref is cleared only
+                                            // when the user genuinely moves to the task input (via task input's onFocus).
+                                            searchHasFocusRef.current = true;
                                             console.log('🔍 Search focused - disabling rapid entry');
                                             isCreatingTasksRef.current = false;
                                             if (!newTaskText || newTaskText.trim() === '') {
                                                 newTaskTextRef.current = '';
                                             }
                                         }}
+                                        // V2.15.3: NO onBlur — onBlur fires spuriously during React re-renders
+                                        // (Supabase sync → state update → reconciliation → DOM briefly loses focus).
+                                        // searchHasFocusRef is cleared in task input's onFocus instead.
                                         onChange={(e) => {
                                             setSearchQuery(e.target.value);
                                         }}
@@ -6725,6 +6716,13 @@
                                     type="text"
                                     placeholder="Add a new task..."
                                     value={newTaskText}
+                                    onFocus={() => {
+                                        // V2.15.3: User has genuinely moved to the task input — this is the
+                                        // ONLY reliable signal that the user left the search field.
+                                        // Clearing searchHasFocusRef here (not in onBlur on the search input)
+                                        // prevents React's spurious blur events from prematurely clearing the guard.
+                                        searchHasFocusRef.current = false;
+                                    }}
                                     onChange={(e) => {
                                         setNewTaskText(e.target.value);
                                         // Extend rapid entry window while typing
@@ -6755,13 +6753,16 @@
                                             if (inputElement) {
                                                 // Helper: Check if should still focus
                                                 const shouldFocus = () => {
-                                                    // V2.15.4: document.activeElement is now reliable here because
-                                                    // searchQuery is local state — typing in search no longer causes
-                                                    // parent re-renders that would briefly move activeElement.
+                                                    // V2.15.3: Check search guard FIRST — this is a ref set by real user
+                                                    // onFocus on the search input, cleared only by real user onFocus on
+                                                    // the task input. Unlike document.activeElement, this ref is NOT
+                                                    // affected by React's reconciliation-triggered spurious blur events.
+                                                    if (searchHasFocusRef.current) return false;
+
                                                     const activeEl = document.activeElement;
                                                     const activeTag = activeEl?.tagName?.toLowerCase();
 
-                                                    // Never steal from ANY input/textarea (includes search input)
+                                                    // V2.12.1.4: Never steal from ANY input/textarea
                                                     if (activeTag === 'input' || activeTag === 'textarea') return false;
 
                                                     if (isInModalRef.current) return false;
@@ -6839,11 +6840,13 @@
                                             if (inputElement) {
                                                 // Helper: Check if should still focus
                                                 const shouldFocus = () => {
-                                                    // V2.15.4: document.activeElement reliable — searchQuery is local
+                                                    // V2.15.3: Check search guard FIRST (same logic as Enter handler)
+                                                    if (searchHasFocusRef.current) return false;
+
                                                     const activeEl = document.activeElement;
                                                     const activeTag = activeEl?.tagName?.toLowerCase();
 
-                                                    // Never steal from ANY input/textarea (includes search input)
+                                                    // V2.12.1.4: Never steal from ANY input/textarea
                                                     if (activeTag === 'input' || activeTag === 'textarea') return false;
 
                                                     if (isInModalRef.current) return false;
@@ -10355,7 +10358,7 @@
                             <IndividualListView listId={parseInt(currentView.split(':')[1])} />
                         )}
                         
-                        {currentView === 'list' && <MemoizedListView newTaskTextRef={newTaskTextRef} />}
+                        {currentView === 'list' && <MemoizedListView newTaskTextRef={newTaskTextRef} searchQuery={searchQuery} setSearchQuery={setSearchQuery} />}
                         {currentView === 'calendar' && <CalendarView />}
                         {currentView === 'timeline' && <TimelineView />}
                         {currentView === 'gantt' && <GanttView />}

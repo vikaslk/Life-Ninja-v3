@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Life Ninja V2.15.2 - Search Focus Fix (ref guard)</title>
+    <title>Life Ninja V2.15.3 - Search Focus Fix (no onBlur, no reactive useEffect)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
@@ -254,7 +254,7 @@
         };
         
         console.log('═══════════════════════════════════════════════');
-        console.log('🚀 VERSION: V2.15.2-SEARCH-REF-GUARD-FEB11 🚀');
+        console.log('🚀 VERSION: V2.15.3-SEARCH-NO-BLUR-NO-EFFECT-FEB12 🚀');
         console.log('');
         console.log('🛡️ CRITICAL PROTECTION:');
         console.log('✅ Real-time persona sync PROTECTED!');
@@ -262,9 +262,10 @@
         console.log('   - Keeps local if more personas');
         console.log('   - Prevents data loss from race conditions');
         console.log('');
-        console.log('✅ Search focus FIXED (again)!');
-        console.log('   - Active typing detection');
-        console.log('   - Focus restoration');
+        console.log('✅ Search focus V2.15.3 fix applied!');
+        console.log('   - Removed reactive useEffect([tasks.length]) — was firing on every Supabase sync');
+        console.log('   - Removed onBlur from search — React fires spurious blur during reconciliation');
+        console.log('   - searchHasFocusRef cleared only by task input onFocus (real user action)');
         console.log('');
         console.log('✅ Timezone fixed!');
         console.log('   - Uses local timezone for dates');
@@ -6411,33 +6412,13 @@
                 // V2.12.2.12: NO search focus restoration useEffect!
                 // Search is now local state (like task field) - no parent updates = no re-renders = no focus loss!
                 
-                // V2.12.2.12: Task refocus - simpler now without search conflicts
-                useEffect(() => {
-                    if (isCreatingTasksRef.current && newTaskInputRef.current) {
-                        // V2.15.2: Use searchHasFocusRef instead of document.activeElement.
-                        // document.activeElement is unreliable during React render cycles —
-                        // Supabase sync triggers re-renders that briefly move activeElement
-                        // away from the search input, causing the guard below to pass and
-                        // steal focus. The ref is set/cleared by real user onFocus/onBlur events
-                        // and is never affected by React's reconciliation.
-                        if (searchHasFocusRef.current) {
-                            console.log('⛔ [TASK] BLOCKED: User typing in search (ref guard)');
-                            return;
-                        }
-
-                        // Also block if typing in ANY other input/textarea (modals, etc)
-                        const activeTag = document.activeElement?.tagName?.toLowerCase();
-                        if (activeTag === 'input' || activeTag === 'textarea') {
-                            console.log('⛔ [TASK] BLOCKED: User typing in', activeTag);
-                            return;
-                        }
-
-                        console.log('✅ [TASK] OK to refocus (rapid entry active)');
-
-                        // Single refocus - no aggressive chain!
-                        newTaskInputRef.current.focus();
-                    }
-                }, [tasks.length]); // Re-run when tasks array length changes
+                // V2.15.3: Removed useEffect([tasks.length]) entirely.
+                // That effect fired reactively on every Supabase sync event (INSERT/DELETE changes tasks.length),
+                // causing it to attempt task-input refocus even when the user was typing in search.
+                // All guards (searchHasFocusRef, document.activeElement) were unreliable because React's
+                // reconciliation fires spurious onBlur/onFocus events that cleared the guard before the
+                // effect could check it. The direct focus() calls in the task creation handler are
+                // sufficient — this reactive effect was redundant AND dangerous.
                 
                 // Save to ref before unmount (V2.12.2.2: Don't save empty strings)
                 useEffect(() => {
@@ -6462,7 +6443,10 @@
                                         placeholder="Search tasks..."
                                         value={searchQuery}
                                         onFocus={() => {
-                                            // V2.15.2: Mark search as focused via ref (reliable across re-renders)
+                                            // V2.15.3: Set search guard ref (never cleared by onBlur — React fires
+                                            // spurious blur events during reconciliation that would clear the guard
+                                            // before shouldFocus() checks it). Instead, the ref is cleared only
+                                            // when the user genuinely moves to the task input (via task input's onFocus).
                                             searchHasFocusRef.current = true;
                                             console.log('🔍 Search focused - disabling rapid entry');
                                             isCreatingTasksRef.current = false;
@@ -6470,10 +6454,9 @@
                                                 newTaskTextRef.current = '';
                                             }
                                         }}
-                                        onBlur={() => {
-                                            // V2.15.2: Clear ref when user leaves search field
-                                            searchHasFocusRef.current = false;
-                                        }}
+                                        // V2.15.3: NO onBlur — onBlur fires spuriously during React re-renders
+                                        // (Supabase sync → state update → reconciliation → DOM briefly loses focus).
+                                        // searchHasFocusRef is cleared in task input's onFocus instead.
                                         onChange={(e) => {
                                             setSearchQuery(e.target.value);
                                         }}
@@ -6733,6 +6716,13 @@
                                     type="text"
                                     placeholder="Add a new task..."
                                     value={newTaskText}
+                                    onFocus={() => {
+                                        // V2.15.3: User has genuinely moved to the task input — this is the
+                                        // ONLY reliable signal that the user left the search field.
+                                        // Clearing searchHasFocusRef here (not in onBlur on the search input)
+                                        // prevents React's spurious blur events from prematurely clearing the guard.
+                                        searchHasFocusRef.current = false;
+                                    }}
                                     onChange={(e) => {
                                         setNewTaskText(e.target.value);
                                         // Extend rapid entry window while typing
@@ -6763,25 +6753,31 @@
                                             if (inputElement) {
                                                 // Helper: Check if should still focus
                                                 const shouldFocus = () => {
+                                                    // V2.15.3: Check search guard FIRST — this is a ref set by real user
+                                                    // onFocus on the search input, cleared only by real user onFocus on
+                                                    // the task input. Unlike document.activeElement, this ref is NOT
+                                                    // affected by React's reconciliation-triggered spurious blur events.
+                                                    if (searchHasFocusRef.current) return false;
+
                                                     const activeEl = document.activeElement;
                                                     const activeTag = activeEl?.tagName?.toLowerCase();
-                                                    
+
                                                     // V2.12.1.4: Never steal from ANY input/textarea
                                                     if (activeTag === 'input' || activeTag === 'textarea') return false;
-                                                    
+
                                                     if (isInModalRef.current) return false;
-                                                    
+
                                                     const timeSince = Date.now() - lastTaskCreationTimeRef.current;
                                                     return isCreatingTasksRef.current && timeSince < 2000;
                                                 };
-                                                
+
                                                 // Immediate attempts
                                                 if (shouldFocus()) inputElement.focus();
                                                 setTimeout(() => { if (shouldFocus()) inputElement.focus(); }, 0);
                                                 setTimeout(() => { if (shouldFocus()) inputElement.focus(); }, 10);
                                                 setTimeout(() => { if (shouldFocus()) inputElement.focus(); }, 20);
                                                 setTimeout(() => { if (shouldFocus()) inputElement.focus(); }, 50);
-                                                
+
                                                 // CRITICAL: Continue trying for 500ms (Supabase updates take 200-500ms)
                                                 setTimeout(() => { if (shouldFocus()) inputElement.focus(); }, 100);
                                                 setTimeout(() => { if (shouldFocus()) inputElement.focus(); }, 150);
@@ -6791,14 +6787,14 @@
                                                 setTimeout(() => { if (shouldFocus()) inputElement.focus(); }, 350);
                                                 setTimeout(() => { if (shouldFocus()) inputElement.focus(); }, 400);
                                                 setTimeout(() => { if (shouldFocus()) inputElement.focus(); }, 500);
-                                                
+
                                                 // Frame-based (syncs with rendering)
                                                 requestAnimationFrame(() => {
                                                     if (shouldFocus()) inputElement.focus();
                                                     requestAnimationFrame(() => { if (shouldFocus()) inputElement.focus(); });
                                                 });
                                             }
-                                            
+
                                             // Create task - pass rapid mode status
                                             createTask({ text: taskText, _wasInRapidMode: true });
                                             
@@ -6844,25 +6840,28 @@
                                             if (inputElement) {
                                                 // Helper: Check if should still focus
                                                 const shouldFocus = () => {
+                                                    // V2.15.3: Check search guard FIRST (same logic as Enter handler)
+                                                    if (searchHasFocusRef.current) return false;
+
                                                     const activeEl = document.activeElement;
                                                     const activeTag = activeEl?.tagName?.toLowerCase();
-                                                    
+
                                                     // V2.12.1.4: Never steal from ANY input/textarea
                                                     if (activeTag === 'input' || activeTag === 'textarea') return false;
-                                                    
+
                                                     if (isInModalRef.current) return false;
-                                                    
+
                                                     const timeSince = Date.now() - lastTaskCreationTimeRef.current;
                                                     return isCreatingTasksRef.current && timeSince < 2000;
                                                 };
-                                                
+
                                                 // Immediate attempts
                                                 if (shouldFocus()) inputElement.focus();
                                                 setTimeout(() => { if (shouldFocus()) inputElement.focus(); }, 0);
                                                 setTimeout(() => { if (shouldFocus()) inputElement.focus(); }, 10);
                                                 setTimeout(() => { if (shouldFocus()) inputElement.focus(); }, 20);
                                                 setTimeout(() => { if (shouldFocus()) inputElement.focus(); }, 50);
-                                                
+
                                                 // Continue for 500ms
                                                 setTimeout(() => { if (shouldFocus()) inputElement.focus(); }, 100);
                                                 setTimeout(() => { if (shouldFocus()) inputElement.focus(); }, 150);
@@ -6872,14 +6871,14 @@
                                                 setTimeout(() => { if (shouldFocus()) inputElement.focus(); }, 350);
                                                 setTimeout(() => { if (shouldFocus()) inputElement.focus(); }, 400);
                                                 setTimeout(() => { if (shouldFocus()) inputElement.focus(); }, 500);
-                                                
+
                                                 // Frame-based
                                                 requestAnimationFrame(() => {
                                                     if (shouldFocus()) inputElement.focus();
                                                     requestAnimationFrame(() => { if (shouldFocus()) inputElement.focus(); });
                                                 });
                                             }
-                                            
+
                                             // Create task
                                             createTask({ text: taskText, _wasInRapidMode: true });
                                             

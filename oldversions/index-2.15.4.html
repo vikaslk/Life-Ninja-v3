@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Life Ninja V2.15.5 - Persona Sync Fix (QuickEdit saves to Supabase)</title>
+    <title>Life Ninja V2.15.4 - Search Focus Fix (local searchQuery state)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
@@ -254,7 +254,7 @@
         };
         
         console.log('═══════════════════════════════════════════════');
-        console.log('🚀 VERSION: V2.15.5-PERSONA-SYNC-FEB12 🚀');
+        console.log('🚀 VERSION: V2.15.4-SEARCH-LOCAL-STATE-FEB12 🚀');
         console.log('');
         console.log('🛡️ CRITICAL PROTECTION:');
         console.log('✅ Real-time persona sync PROTECTED!');
@@ -266,10 +266,6 @@
         console.log('   - searchQuery moved to LOCAL state in ListView — no parent re-renders on typing');
         console.log('   - V2.15.3 log confirmed: onFocus fired 10x per search type (parent re-render was cause)');
         console.log('   - useEffect([tasks.length]) restored with reliable document.activeElement guard');
-        console.log('');
-        console.log('✅ Persona sync V2.15.5 fix applied!');
-        console.log('   - QuickEdit Save now calls saveTaskToSupabase for regular tasks');
-        console.log('   - Previously: persona + all other field changes were local-only, never synced to Android');
         console.log('');
         console.log('✅ Timezone fixed!');
         console.log('   - Uses local timezone for dates');
@@ -10949,17 +10945,10 @@
                                                 });
                                                 showToast('Subtask updated!');
                                             } else {
-                                                // Regular task - update state AND sync to Supabase
-                                                setTasks(prev => prev.map(t =>
+                                                // Regular task - save normally
+                                                setTasks(prev => prev.map(t => 
                                                     t.id === quickEditTask.id ? validatedTask : t
                                                 ));
-                                                // V2.15.5: Was missing Supabase save — ALL QuickEdit field changes
-                                                // (persona, notes, due date, priority, etc.) were updating local
-                                                // React state only and never persisting to the database.
-                                                // This is why persona changes on PC never appeared on Android (S3/S7).
-                                                if (validatedTask.supabaseId) {
-                                                    saveTaskToSupabase(validatedTask, { excludeManualOrder: true });
-                                                }
                                                 showToast('Task updated!');
                                             }
                                             

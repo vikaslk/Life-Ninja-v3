@@ -1,0 +1,379 @@
+(index):64 cdn.tailwindcss.com should not be used in production. To use Tailwind CSS in production, install it as a PostCSS plugin or use the Tailwind CLI: https://tailwindcss.com/docs/installation
+(anonymous) @ (index):64
+(anonymous) @ (index):64
+Life-Ninja-v3/:27 You are using the in-browser Babel transformer. Be sure to precompile your scripts for production - https://babeljs.io/docs/setup/
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ transformScriptTags.ts:271
+VEe @ index.ts:277
+WEe @ index.ts:261
+index.ts:107 [BABEL] Note: The code generator has deoptimised the styling of /Inline Babel script as it exceeds the max of 500KB.
+hk @ index.ts:107
+bk @ index.ts:297
+bV @ generate.ts:35
+(anonymous) @ index.ts:62
+(anonymous) @ babel.min.js:3
+(anonymous) @ babel.min.js:3
+(anonymous) @ babel.min.js:3
+(anonymous) @ babel.min.js:3
+iF @ index.js:251
+sync @ index.js:89
+stopHiding - secret - don't use this - v1 @ rewrite-stack-trace.ts:99
+SV @ transform.ts:66
+FEe @ index.ts:179
+(anonymous) @ transformScriptTags.ts:53
+SEe @ transformScriptTags.ts:120
+n @ transformScriptTags.ts:193
+PEe @ transformScriptTags.ts:240
+(anonymous) @ transformScriptTags.ts:276
+VEe @ index.ts:277
+WEe @ index.ts:261
+Inline Babel script:66 ═══════════════════════════════════════════════
+Inline Babel script:67 🚀 VERSION: V2.15.4-SEARCH-LOCAL-STATE-FEB12 🚀
+Inline Babel script:68 
+Inline Babel script:69 🛡️ CRITICAL PROTECTION:
+Inline Babel script:70 ✅ Real-time persona sync PROTECTED!
+Inline Babel script:71    - Smart merge logic
+Inline Babel script:72    - Keeps local if more personas
+Inline Babel script:73    - Prevents data loss from race conditions
+Inline Babel script:74 
+Inline Babel script:75 ✅ Search focus V2.15.4 fix applied!
+Inline Babel script:76    - searchQuery moved to LOCAL state in ListView — no parent re-renders on typing
+Inline Babel script:77    - V2.15.3 log confirmed: onFocus fired 10x per search type (parent re-render was cause)
+Inline Babel script:78    - useEffect([tasks.length]) restored with reliable document.activeElement guard
+Inline Babel script:79 
+Inline Babel script:80 ✅ Timezone fixed!
+Inline Babel script:81    - Uses local timezone for dates
+Inline Babel script:82    - Created date shows correctly
+Inline Babel script:83 
+Inline Babel script:84 ✅ Device tracking added!
+Inline Babel script:85    - All saves track device ID
+Inline Babel script:86    - Better debugging
+Inline Babel script:87 
+Inline Babel script:88 🎯 V2.14.1 FIXES INCLUDED:
+Inline Babel script:89 ✅ Personas sync race condition fixed
+Inline Babel script:90 ✅ ESC in QuickEdit modal
+Inline Babel script:91 ═══════════════════════════════════════════════
+Inline Babel script:92 🖥️ Device detected: Desktop
+Inline Babel script:94 ✅ Supabase ready
+Inline Babel script:572 ✅ Already synced - skipping migration check
+Inline Babel script:939 🔔 Setting up real-time subscriptions...
+Inline Babel script:1777 🔄 Loading lists from Supabase (user logged in)
+Inline Babel script:1737 📥 Loading lists from Supabase...
+Inline Babel script:1786 📡 V2.7.1: Setting up custom_lists real-time subscription
+Inline Babel script:1927 🔄 Loading projects from Supabase (user logged in)
+Inline Babel script:1939 📦 Found 4 projects in localStorage
+Inline Babel script:2027 🔄 Loading personas from Supabase settings
+Inline Babel script:2038 📦 Found 5 personas in localStorage
+Inline Babel script:1366 🔌 Unsubscribing from real-time channels
+Inline Babel script:1109 📡 [2026-02-13T08:11:35.110Z] Tasks subscription status: CLOSED
+Life-Ninja-v3/:27 🔌 Real-time sync CLOSED - connection ended
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1125
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+t @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+unsubscribe @ supabase.js:3
+(anonymous) @ Inline Babel script:1368
+If @ react-dom.production.min.js:161
+Gc @ react-dom.production.min.js:164
+Xb @ react-dom.production.min.js:199
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Inline Babel script:1214 📡 [2026-02-13T08:11:35.110Z] Events subscription status: CLOSED
+Life-Ninja-v3/:27 🔌 Events sync CLOSED - connection ended
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1224
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+t @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+unsubscribe @ supabase.js:3
+(anonymous) @ Inline Babel script:1369
+If @ react-dom.production.min.js:161
+Gc @ react-dom.production.min.js:164
+Xb @ react-dom.production.min.js:199
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Inline Babel script:1294 📡 [2026-02-13T08:11:35.110Z] Projects subscription status: CLOSED
+Inline Babel script:1298 🔌 Projects sync CLOSED - connection ended
+Inline Babel script:1356 📡 [2026-02-13T08:11:35.110Z] Personas subscription status: CLOSED
+Inline Babel script:1360 🔌 Personas sync CLOSED - connection ended
+Inline Babel script:1881 🔌 Unsubscribing from lists channel
+Inline Babel script:1866 📡 [2026-02-13T08:11:35.111Z] Lists subscription status: CLOSED
+Life-Ninja-v3/:27 🔌 Lists sync CLOSED - connection ended
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1875
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+t @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+unsubscribe @ supabase.js:3
+(anonymous) @ Inline Babel script:1882
+If @ react-dom.production.min.js:161
+Gc @ react-dom.production.min.js:164
+Xb @ react-dom.production.min.js:199
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Inline Babel script:572 ✅ Already synced - skipping migration check
+Inline Babel script:939 🔔 Setting up real-time subscriptions...
+Inline Babel script:1777 🔄 Loading lists from Supabase (user logged in)
+Inline Babel script:1737 📥 Loading lists from Supabase...
+Inline Babel script:1786 📡 V2.7.1: Setting up custom_lists real-time subscription
+Inline Babel script:1927 🔄 Loading projects from Supabase (user logged in)
+Inline Babel script:1939 📦 Found 4 projects in localStorage
+Inline Babel script:2027 🔄 Loading personas from Supabase settings
+Inline Babel script:2038 📦 Found 5 personas in localStorage
+Inline Babel script:1366 🔌 Unsubscribing from real-time channels
+Inline Babel script:1109 📡 [2026-02-13T08:11:35.181Z] Tasks subscription status: CLOSED
+Life-Ninja-v3/:27 🔌 Real-time sync CLOSED - connection ended
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1125
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+t @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+unsubscribe @ supabase.js:3
+(anonymous) @ Inline Babel script:1368
+If @ react-dom.production.min.js:161
+Gc @ react-dom.production.min.js:164
+Xb @ react-dom.production.min.js:199
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Inline Babel script:1214 📡 [2026-02-13T08:11:35.181Z] Events subscription status: CLOSED
+Life-Ninja-v3/:27 🔌 Events sync CLOSED - connection ended
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1224
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+t @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+unsubscribe @ supabase.js:3
+(anonymous) @ Inline Babel script:1369
+If @ react-dom.production.min.js:161
+Gc @ react-dom.production.min.js:164
+Xb @ react-dom.production.min.js:199
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Inline Babel script:1294 📡 [2026-02-13T08:11:35.182Z] Projects subscription status: CLOSED
+Inline Babel script:1298 🔌 Projects sync CLOSED - connection ended
+Inline Babel script:1356 📡 [2026-02-13T08:11:35.182Z] Personas subscription status: CLOSED
+Inline Babel script:1360 🔌 Personas sync CLOSED - connection ended
+Inline Babel script:1881 🔌 Unsubscribing from lists channel
+Inline Babel script:1866 📡 [2026-02-13T08:11:35.182Z] Lists subscription status: CLOSED
+Life-Ninja-v3/:27 🔌 Lists sync CLOSED - connection ended
+console.warn @ Life-Ninja-v3/:27
+(anonymous) @ Inline Babel script:1875
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+t @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_matchReceive @ supabase.js:3
+(anonymous) @ supabase.js:3
+(anonymous) @ supabase.js:3
+_trigger @ supabase.js:3
+trigger @ supabase.js:3
+(anonymous) @ supabase.js:3
+unsubscribe @ supabase.js:3
+(anonymous) @ Inline Babel script:1882
+If @ react-dom.production.min.js:161
+Gc @ react-dom.production.min.js:164
+Xb @ react-dom.production.min.js:199
+(anonymous) @ react-dom.production.min.js:197
+S @ react.production.min.js:17
+U @ react.production.min.js:21
+Inline Babel script:572 ✅ Already synced - skipping migration check
+Inline Babel script:939 🔔 Setting up real-time subscriptions...
+Inline Babel script:1777 🔄 Loading lists from Supabase (user logged in)
+Inline Babel script:1737 📥 Loading lists from Supabase...
+Inline Babel script:1786 📡 V2.7.1: Setting up custom_lists real-time subscription
+Inline Babel script:1927 🔄 Loading projects from Supabase (user logged in)
+Inline Babel script:1939 📦 Found 4 projects in localStorage
+Inline Babel script:2027 🔄 Loading personas from Supabase settings
+Inline Babel script:2038 📦 Found 5 personas in localStorage
+Inline Babel script:1954 ✅ Loaded 6 projects from Supabase
+Inline Babel script:2010 ✅ Projects sync complete
+Inline Babel script:1109 📡 [2026-02-13T08:11:35.527Z] Tasks subscription status: SUBSCRIBED
+Inline Babel script:1113 ✅ Real-time sync CONNECTED
+Inline Babel script:1214 📡 [2026-02-13T08:11:35.529Z] Events subscription status: SUBSCRIBED
+Inline Babel script:1218 ✅ Events sync CONNECTED
+Inline Babel script:1294 📡 [2026-02-13T08:11:35.530Z] Projects subscription status: SUBSCRIBED
+Inline Babel script:1296 ✅ Projects sync CONNECTED
+Inline Babel script:1356 📡 [2026-02-13T08:11:35.530Z] Personas subscription status: SUBSCRIBED
+Inline Babel script:1358 ✅ Personas sync CONNECTED
+Inline Babel script:1866 📡 [2026-02-13T08:11:35.530Z] Lists subscription status: SUBSCRIBED
+Inline Babel script:1869 ✅ Lists sync CONNECTED
+Inline Babel script:1750 ✅ Loaded 3 lists from Supabase
+Inline Babel script:1766 ✅ Lists loaded, Supabase is source of truth
+Inline Babel script:2154 💾 [Desktop] Saving 3 personas to Supabase: (3) ['The Self', 'Healthcare Professional', 'Entrepreneur']
+Inline Babel script:2155    Timestamp: 2026-02-13T08:11:35.688Z
+Inline Babel script:2061 ✅ Loaded personas from Supabase: {personas: Array(3)}
+Inline Babel script:2100 ✅ Using 3 personas from Supabase
+Inline Babel script:2122 ✅ Personas sync complete
+Inline Babel script:1750 ✅ Loaded 3 lists from Supabase
+Inline Babel script:1766 ✅ Lists loaded, Supabase is source of truth
+Inline Babel script:1483 ✅ Loaded events from Supabase: 0
+Inline Babel script:1515 ✅ Events sync complete
+Inline Babel script:2061 ✅ Loaded personas from Supabase: {personas: Array(3)}
+Inline Babel script:2100 ✅ Using 3 personas from Supabase
+Inline Babel script:2122 ✅ Personas sync complete
+Inline Babel script:769 ✅ Loaded tasks from Supabase: 108
+Inline Babel script:835 ✅ Manual order detected, enabled manual order mode
+Inline Babel script:846 ✅ Sync complete, Supabase is source of truth
+Inline Babel script:2143 ⏭️ Skipping save - just loaded from Supabase
+Inline Babel script:1954 ✅ Loaded 6 projects from Supabase
+Inline Babel script:2010 ✅ Projects sync complete
+Inline Babel script:1750 ✅ Loaded 3 lists from Supabase
+Inline Babel script:1766 ✅ Lists loaded, Supabase is source of truth
+Inline Babel script:1954 ✅ Loaded 6 projects from Supabase
+Inline Babel script:2010 ✅ Projects sync complete
+Inline Babel script:2061 ✅ Loaded personas from Supabase: {personas: Array(3)}
+Inline Babel script:2100 ✅ Using 3 personas from Supabase
+Inline Babel script:2122 ✅ Personas sync complete
+Inline Babel script:2174 ✅ [Desktop] Personas saved to Supabase successfully
+Inline Babel script:2143 ⏭️ Skipping save - just loaded from Supabase
+Inline Babel script:6273 🔍 Search focused - disabling rapid entry
+Inline Babel script:6273 🔍 Search focused - disabling rapid entry
+Inline Babel script:2471 🔇 Toast suppressed - rapid entry in progress
+Inline Babel script:6242 ✅ [TASK] OK to refocus (rapid entry active)
+Inline Babel script:711 ✅ Task saved to Supabase: 728
+Inline Babel script:6242 ✅ [TASK] OK to refocus (rapid entry active)
+Inline Babel script:953 📥 Tasks change detected: INSERT
+Inline Babel script:956 🔍 INSERT EVENT RECEIVED
+Inline Babel script:957 🔍 payload.new.text: Rapid task typing February 13 Task 01
+Inline Babel script:963 🔍 isCreatingTasksRef: true
+Inline Babel script:964 🔍 timeSinceLastCreation: 699 ms
+Inline Babel script:965 🔍 isRapidEntry: true
+Inline Babel script:968 ⏭️ ✅ SKIPPING INSERT - user is in rapid task entry mode
+Inline Babel script:2471 🔇 Toast suppressed - rapid entry in progress
+Inline Babel script:6242 ✅ [TASK] OK to refocus (rapid entry active)
+Inline Babel script:711 ✅ Task saved to Supabase: 729
+Inline Babel script:6242 ✅ [TASK] OK to refocus (rapid entry active)
+Inline Babel script:953 📥 Tasks change detected: INSERT
+Inline Babel script:956 🔍 INSERT EVENT RECEIVED
+Inline Babel script:957 🔍 payload.new.text: Rapid task typing February 13 Task 02
+Inline Babel script:963 🔍 isCreatingTasksRef: true
+Inline Babel script:964 🔍 timeSinceLastCreation: 356 ms
+Inline Babel script:965 🔍 isRapidEntry: true
+Inline Babel script:968 ⏭️ ✅ SKIPPING INSERT - user is in rapid task entry mode
+Inline Babel script:2471 🔇 Toast suppressed - rapid entry in progress
+Inline Babel script:6242 ✅ [TASK] OK to refocus (rapid entry active)
+Inline Babel script:711 ✅ Task saved to Supabase: 730
+Inline Babel script:6242 ✅ [TASK] OK to refocus (rapid entry active)
+Inline Babel script:953 📥 Tasks change detected: INSERT
+Inline Babel script:956 🔍 INSERT EVENT RECEIVED
+Inline Babel script:957 🔍 payload.new.text: Rapid task typing February 13 Task 03
+Inline Babel script:963 🔍 isCreatingTasksRef: true
+Inline Babel script:964 🔍 timeSinceLastCreation: 253 ms
+Inline Babel script:965 🔍 isRapidEntry: true
+Inline Babel script:968 ⏭️ ✅ SKIPPING INSERT - user is in rapid task entry mode
+Inline Babel script:2471 🔇 Toast suppressed - rapid entry in progress
+Inline Babel script:6242 ✅ [TASK] OK to refocus (rapid entry active)
+Inline Babel script:711 ✅ Task saved to Supabase: 731
+Inline Babel script:6242 ✅ [TASK] OK to refocus (rapid entry active)
+Inline Babel script:953 📥 Tasks change detected: INSERT
+Inline Babel script:956 🔍 INSERT EVENT RECEIVED
+Inline Babel script:957 🔍 payload.new.text: Rapid task typing February 13 Task 04
+Inline Babel script:963 🔍 isCreatingTasksRef: true
+Inline Babel script:964 🔍 timeSinceLastCreation: 250 ms
+Inline Babel script:965 🔍 isRapidEntry: true
+Inline Babel script:968 ⏭️ ✅ SKIPPING INSERT - user is in rapid task entry mode
+Inline Babel script:2471 🔇 Toast suppressed - rapid entry in progress
+Inline Babel script:6242 ✅ [TASK] OK to refocus (rapid entry active)
+Inline Babel script:711 ✅ Task saved to Supabase: 732
+Inline Babel script:6242 ✅ [TASK] OK to refocus (rapid entry active)
+Inline Babel script:953 📥 Tasks change detected: INSERT
+Inline Babel script:956 🔍 INSERT EVENT RECEIVED
+Inline Babel script:957 🔍 payload.new.text: Rapid task typing February 13 Task 05
+Inline Babel script:963 🔍 isCreatingTasksRef: true
+Inline Babel script:964 🔍 timeSinceLastCreation: 266 ms
+Inline Babel script:965 🔍 isRapidEntry: true
+Inline Babel script:968 ⏭️ ✅ SKIPPING INSERT - user is in rapid task entry mode
+Inline Babel script:1231 💓 [2026-02-13T08:12:35.185Z] Connection heartbeat - monitoring active
+Inline Babel script:6273 🔍 Search focused - disabling rapid entry
+Inline Babel script:744 ✅ Task deleted from Supabase: 636
+Inline Babel script:2471 🔇 Toast suppressed - rapid entry in progress
+Inline Babel script:6242 ✅ [TASK] OK to refocus (rapid entry active)
+Inline Babel script:711 ✅ Task saved to Supabase: 733
+Inline Babel script:6242 ✅ [TASK] OK to refocus (rapid entry active)
+Inline Babel script:953 📥 Tasks change detected: INSERT
+Inline Babel script:956 🔍 INSERT EVENT RECEIVED
+Inline Babel script:957 🔍 payload.new.text: I like eating sandwiches 01
+Inline Babel script:963 🔍 isCreatingTasksRef: true
+Inline Babel script:964 🔍 timeSinceLastCreation: 299 ms
+Inline Babel script:965 🔍 isRapidEntry: true
+Inline Babel script:968 ⏭️ ✅ SKIPPING INSERT - user is in rapid task entry mode
+Inline Babel script:2471 🔇 Toast suppressed - rapid entry in progress
+Inline Babel script:6242 ✅ [TASK] OK to refocus (rapid entry active)
+Inline Babel script:711 ✅ Task saved to Supabase: 734
+Inline Babel script:6242 ✅ [TASK] OK to refocus (rapid entry active)
+Inline Babel script:953 📥 Tasks change detected: INSERT
+Inline Babel script:956 🔍 INSERT EVENT RECEIVED
+Inline Babel script:957 🔍 payload.new.text: I like eating sandwiches 02
+Inline Babel script:963 🔍 isCreatingTasksRef: true
+Inline Babel script:964 🔍 timeSinceLastCreation: 242 ms
+Inline Babel script:965 🔍 isRapidEntry: true
+Inline Babel script:968 ⏭️ ✅ SKIPPING INSERT - user is in rapid task entry mode
+Inline Babel script:6242 ✅ [TASK] OK to refocus (rapid entry active)
+Inline Babel script:744 ✅ Task deleted from Supabase: 650
+Inline Babel script:6242 ✅ [TASK] OK to refocus (rapid entry active)
+Inline Babel script:2471 🔇 Toast suppressed - rapid entry in progress
+Inline Babel script:6242 ✅ [TASK] OK to refocus (rapid entry active)
+Inline Babel script:711 ✅ Task saved to Supabase: 735
+Inline Babel script:6242 ✅ [TASK] OK to refocus (rapid entry active)
+Inline Babel script:953 📥 Tasks change detected: INSERT
+Inline Babel script:956 🔍 INSERT EVENT RECEIVED
+Inline Babel script:957 🔍 payload.new.text: I like eating sandwiches 03
+Inline Babel script:963 🔍 isCreatingTasksRef: true
+Inline Babel script:964 🔍 timeSinceLastCreation: 249 ms
+Inline Babel script:965 🔍 isRapidEntry: true
+Inline Babel script:968 ⏭️ ✅ SKIPPING INSERT - user is in rapid task entry mode
+Inline Babel script:6273 🔍 Search focused - disabling rapid entry
+Inline Babel script:1231 💓 [2026-02-13T08:13:35.187Z] Connection heartbeat - monitoring active

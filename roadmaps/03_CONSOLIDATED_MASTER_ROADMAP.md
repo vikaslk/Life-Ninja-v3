@@ -1537,6 +1537,339 @@ import { formatTaskDate } from '../utils/dateHelpers';
 
 ---
 
+### Phase 2 — Additional Platform & UX Roadmap Items
+
+*(Added February 2026 — Items 6-10 from session planning)*
+
+---
+
+#### Item 6: Android App (Capacitor.js Native Wrapper)
+
+**Status**: Planned — Phase 2
+**Priority**: High (user-requested)
+
+**Approach:**
+- V3 is already a PWA (Progressive Web App) — works on Android via Chrome browser today
+- Phase 2: Wrap in [Capacitor.js](https://capacitorjs.com/) to produce a native Android APK
+- Enables installation from Google Play Store, native push notifications, offline caching
+- V3 Drawer component (right-side slide-in) + touch-friendly chip resize handles are the first UX steps toward Android polish
+
+**Pre-work already done in V3:**
+- `Drawer.jsx` — right-side slide-in, touch-friendly
+- `TimelineView` chip edge-resize — uses `touchstart`/`touchmove`/`touchend`
+
+**Roadmap estimate**: 2-3 weeks (Week 18-20)
+
+---
+
+#### Item 7: Themes / Skinning System
+
+**Status**: Promoted to Phase 3 — see Item 12 for full spec (updated Feb 2026)
+**Priority**: Medium (user's own rating)
+
+**Summary:** Phase 1 of theming (status icon overrides) was built in Feb 2026 — `iconStore.js`, `getStatusIcon.js`, `IconPickerPanel.jsx`. Full theming with CSS custom properties and curated theme packages is deferred to Phase 3 pending Tailwind v4 migration. See **Item 12** for the complete architecture spec.
+
+**Roadmap estimate**: Phase 3 (3-4 weeks, post Tailwind v4 migration)
+
+---
+
+#### Item 8: Events System (with Embedded Task Timeline)
+
+**Status**: Planned — Phase 2
+**Priority**: High (similar to V2, but enhanced)
+
+**V2 Events system recap:**
+- Events had: id, title, start, end, description, location, recurring flag
+
+**V3 difference (user request):**
+- Tasks can be linked to an event via `event_id` foreign key on the tasks table
+- Event timeline view shows the event block with nested task chips inside the time range
+- Example: "Team Sprint" event from 9am-12pm → shows all tasks assigned to that event as chips within the block
+
+**Technical plan:**
+- New `events` Supabase table (id, user_id, title, start_time, end_time, description, location, recurring, created_at)
+- Add `event_id uuid REFERENCES events(id)` to tasks table
+- New `EventsView` (timeline-style) with event blocks + embedded task chips
+- TaskEditForm: add "Link to event" dropdown
+- `eventsStore.js` for event CRUD
+
+**Roadmap estimate**: 3-4 weeks (Week 11-14)
+
+---
+
+#### Item 9: Appointments System
+
+**Status**: Planned — Phase 2
+**Priority**: Medium (user to flesh out parameters)
+
+**User note**: "Similar to Events but with a different set of parameters. I'll flesh these out later."
+
+**Preliminary plan:**
+- Appointments differ from Events in having: attendees, confirmation status, location (physical/virtual), reminder type
+- If parameter overlap with Events exceeds 80% → **merge into one system** with a `type: 'event' | 'appointment'` discriminator
+- If <80% overlap → separate `appointments` Supabase table
+
+**Action**: User to review and confirm parameters in a future session before implementation.
+
+**Roadmap estimate**: 2-3 weeks (after Events system, or merged with it)
+
+---
+
+#### Item 10: ⋮ Menu Rethink
+
+**Status**: Parked — user has no alternative in mind yet
+**Priority**: Low (user raised concern but no clear direction)
+
+**Current state**: TaskCard has a ⋮ kebab menu (Edit, Delete, Archive). User noted they don't like it but hasn't proposed an alternative yet.
+
+**Options to explore when ready:**
+1. Swipe-to-reveal actions (native mobile feel)
+2. Long-press context menu (Android native pattern)
+3. Inline quick-action icons always visible (Pinterest-style)
+4. No menu — all actions in the Drawer edit form only
+
+**Action**: Revisit when user has a clear preference. No code changes until direction confirmed.
+
+---
+
+#### Item 11: Kanban Board View
+
+**Status**: Planned — Phase 2
+**Priority**: High (user-requested)
+
+**Description:**
+A swimlane board view grouped by status columns. Cards are draggable between columns to change task status in one gesture.
+
+**Columns (default):**
+- Not Started | In Progress | Completed | Blocked | Deferred
+
+**Project-aware columns:** When viewing tasks filtered by a project that has a custom status cycle, the Kanban columns reflect that project's status order automatically.
+
+**Features:**
+- Drag card left/right to change status (optimistic update + DB save)
+- Grouped by persona or project as an option (rows become swimlanes)
+- Compact card: task name, priority badge, persona icon, due date chip
+- "Add task" at the bottom of each column (quick-add inline)
+- Scrollable columns for overflow (vertical scroll per column)
+
+**Architecture:**
+- New `KanbanView.jsx` component alongside `ListView.jsx`, `GanttView.jsx`, etc.
+- Reuses `TaskCard` (compact variant) and the existing `useTasksStore`
+- Drag implementation: HTML5 Drag & Drop API (no external library needed for MVP)
+- Status update: same `updateTask` + `saveTask` pattern as ListView
+
+**Roadmap estimate**: 2-3 weeks
+
+---
+
+#### Item 12: Theming & Skin System (Enhanced — Phase 3)
+
+**Status**: Planned — Phase 3 (supersedes Item 7 placeholder)
+**Priority**: Medium (user's own rating)
+
+**Phase 1 (already built, Feb 2026):**
+`iconStore.js` — Zustand store for per-status emoji/icon overrides, persisted to `localStorage`.
+`getStatusIcon.js` — utility that merges iconStore overrides with `STATUS_ICON_LIBRARY` defaults.
+`IconPickerPanel.jsx` — Admin UI for picking status icons.
+
+**Phase 3 Vision (full theming):**
+Extend `iconStore` with a companion `themeStore` holding CSS design token values:
+- `primary` — main action colour (default: indigo-600)
+- `surface` — card background (default: white)
+- `accent` — highlight/badge colour
+- `muted` — secondary text
+- `border` — card/table borders
+
+**Curated theme packages:**
+Each theme bundles a colour palette + icon set:
+1. **Indigo** (current default — indigo/gray palette, emoji status icons)
+2. **Dark Mode** (near-black surface, blue accent)
+3. **Vibrant** (purple/pink palette, bold icons)
+4. **Nature** (green/amber palette, leaf/sun emoji set)
+
+**Implementation:**
+CSS variable injection at `:root` — all Tailwind classes reference CSS vars.
+> **Architecture note**: Defer until Tailwind v4 migration. Tailwind v4 natively supports `@theme` with CSS variable tokens, making this dramatically simpler. Do NOT implement with Tailwind v3.
+
+**Admin UI:**
+"Appearance" section in AdminView:
+- Theme package selector (radio cards with previews)
+- Per-token colour overrides (colour picker)
+- Icon package selector (emoji set vs SVG set)
+
+**Roadmap estimate**: 3-4 weeks (Phase 3, post Tailwind v4 migration)
+
+---
+
+### Phase 1 — Session 3 Sprint (Next coding session)
+
+*(Added Feb 17, 2026 — Items 13–19 from session 3 review)*
+
+---
+
+#### Item 13: Gantt Bar Colour by Priority
+
+**Status**: Planned — Phase 1, next sprint
+**Priority**: Medium
+
+**Description:** Gantt chart bars are currently coloured by task status. Switch to **priority-based colouring** so it's immediately obvious which high-priority tasks are in the plan. One exception: completed tasks always stay green (`bg-emerald-400`) regardless of priority.
+
+**Colour mapping:**
+```
+urgent       → bg-red-400
+high         → bg-orange-400
+medium       → bg-yellow-400
+low          → bg-blue-400
+non-priority → bg-gray-300
+completed    → bg-emerald-400 (overrides priority — always green)
+```
+
+**Files:** `src/components/views/GanttView.jsx`
+- Replace `STATUS_COLORS` with `PRIORITY_BAR_COLORS` constant
+- Change `barColor(status)` → `barColor(task)` signature
+- Update all call sites + tests
+
+**Estimate:** 1-2 hours
+
+---
+
+#### Item 14: Gantt Drag-Drop Reliability Fix (Bug)
+
+**Status**: Bug — Phase 1, next sprint (critical UX)
+**Priority**: High
+
+**Two confirmed bugs:**
+
+**14a. Right-edge resize works on alternating attempts only**
+Root cause: `useEffect` for day-view resize includes `visualResizeDelta` in its dependency array. This causes the effect to re-register on every `mousemove` event, potentially losing the `mouseup` listener between re-registers. Fix: capture `visualResizeDelta` via a `useRef` in `onMouseUp` instead of including it in the dependency array.
+
+**14b. Bar body drag (left handle, day view) does not visually move the bar**
+Root cause: Likely `pointer-events` issue — the bar `<button>` sits above the move handle in z-order and may intercept mouse events even during drag. Fix: add `pointer-events-none` to the bar button when `isMovingThis === true`; add `userSelect: 'none'` and `select-none` class to the chart container during any active drag.
+
+**Files:** `src/components/views/GanttView.jsx`
+
+**Estimate:** 2-3 hours (careful debugging required)
+
+---
+
+#### Item 15: Status Cycler in Gantt Task Name Panel
+
+**Status**: Planned — Phase 1, next sprint
+**Priority**: Medium
+
+**Description:** The left task-name panel in Gantt view shows only the task name text. Add a **clickable status icon** (same cycler as in ListView TaskCard) before the task name. The cycle order is project-aware via `getStatusCycle(projects, task.project)`.
+
+**UI:**
+```
+[🟡] Task name text →  (click 🟡 to cycle status; click text to open Full Edit)
+```
+
+**Technical approach:**
+- Add `handleCycleStatus(taskId)` to `GanttView` (same pattern as `handleStatusToggle` in ListView)
+- Use `getStatusIcon` from `src/utils/getStatusIcon.js` + `useIconStore` from `src/store/iconStore.js` (both already in codebase)
+- Update `renderDateRows` and `renderDayRows`
+- Add Gantt test
+
+**Estimate:** 2-3 hours
+
+---
+
+#### Item 16: Subtask parent_id Lost on Page Refresh (Critical Bug)
+
+**Status**: Bug — Phase 1, next sprint (data loss)
+**Priority**: Critical
+
+**Root cause confirmed:** `src/services/tasks.js` `toRow()` and `fromRow()` functions do NOT map `parent_id`. When a subtask is saved, `parent_id` is omitted from the Supabase row. On refresh, tasks are fetched back with `parent_id: null` — subtasks appear as standalone top-level tasks.
+
+**Fix:**
+
+Step 1 — Check/create Supabase migration:
+```sql
+-- supabase/migrations/002_add_parent_id.sql
+ALTER TABLE tasks ADD COLUMN IF NOT EXISTS parent_id uuid REFERENCES tasks(id) ON DELETE CASCADE;
+CREATE INDEX IF NOT EXISTS idx_tasks_parent_id ON tasks(parent_id);
+```
+
+Step 2 — Add to `toRow()` in `src/services/tasks.js`:
+```js
+parent_id: task.parent_id ?? null,
+```
+
+Step 3 — Add to `fromRow()` in `src/services/tasks.js`:
+```js
+parent_id: row.parent_id ?? null,
+```
+
+Step 4 — Update `src/__tests__/services/tasks.test.js` fixtures to include `parent_id`
+
+**Estimate:** 1-2 hours (straightforward once confirmed migration exists)
+
+---
+
+#### Item 17: Double-Click to Edit (Open Quick Edit)
+
+**Status**: Planned — Phase 1, next sprint
+**Priority**: Medium
+
+**Description:** No double-click handler exists anywhere in the codebase. Add `onDoubleClick` to the task card body to open QuickEditModal — a natural, discoverable shortcut that complements badge-click and ✎ button.
+
+**Technical approach:**
+- In `TaskCard.jsx`, add `onDoubleClick={(e) => { e.stopPropagation(); onEdit?.(task.id) }}` to the card body `<div className="flex-1 min-w-0">`
+- In `handleBodyClick` (single-click = expand subtasks), add guard: `if (e.detail >= 2) return` — prevents subtask expansion flicker when double-clicking
+- `onEdit` prop already exists on TaskCard and is wired in ListView
+- Add test: `it('opens Quick Edit on double-click', ...)`
+
+**Estimate:** 1 hour
+
+---
+
+#### Item 18: Inline Subtask Add from TaskCard
+
+**Status**: Planned — Phase 1, next sprint
+**Priority**: Medium
+
+**Context:** Single-click subtask expand/collapse is already implemented (`handleBodyClick` → `showSubtasks` state toggle). The gap is: when the subtask list is visible, there is no way to add a new subtask inline — the user must open Full Edit.
+
+**Proposed UI:**
+```
+▾ Task name
+  🟡 Subtask 1
+  ✅ Subtask 2
+  [+ Add subtask...        ]  ← new mini-input, shown at bottom of expanded list
+```
+
+**Technical approach:**
+- Add a mini-input (`<input placeholder="Add subtask…">`) inside the subtask section of `TaskCard`, shown only when `showSubtasks === true`
+- On Enter / blur with text: call `onAddSubtask?.(text)` prop
+- `ListView.jsx` already has `onAddSubtask` handler wired — verify it is passed to `<TaskCard onAddSubtask={...}>`
+- Add test
+
+**Estimate:** 1-2 hours
+
+---
+
+#### Item 19: Analytics Detail Views + Error Hardening
+
+**Status**: Planned — Phase 1, next sprint
+**Priority**: Medium
+
+**Context:** AnalyticsView time range buttons are fully functional — clicking them recalculates all stats via `useMemo`. The "error on console" the user sees when clicking analytics is from a Chrome browser extension (`Extension context invalidated`) — NOT from the Life Ninja app code. That error is safe to ignore.
+
+**What "more details" likely means:** A drill-down panel — clicking a stat bar (e.g., "Urgent: 3") shows the 3 actual task titles in a small detail list below the bar chart.
+
+**Action items:**
+1. **Confirm** the exact error (if any) with user — eliminate the extension error first
+2. Add **null-guards** to all analytics stat calculations:
+   - `task.priority ?? 'non-priority'`
+   - `task.taskType ?? 'task'`
+   - Guard against division by zero in percentage calculations
+3. Add **drill-down detail panel**: clicking a `BarRow` stat → sets `selectedDetail` state → renders task list below
+4. Add **error boundary** wrapper around AnalyticsView
+
+**Estimate:** 2-4 hours (depending on drill-down scope)
+
+---
+
 ### Phase 3: INTELLIGENCE (Weeks 21-30)
 
 **Goal**: AI-powered strategic planning and autonomous actions
@@ -2374,6 +2707,8 @@ const { data: todayTasks } = await supabase
 | Date | Version | Changes |
 |------|---------|---------|
 | Feb 2, 2026 | 1.0 | Initial consolidated roadmap |
+| Feb 17, 2026 | 1.1 | Added Item 11 (Kanban Board View), Item 12 (Theming & Skin System — Phase 3 full spec); updated Item 7 to reference Item 12; noted Phase 1 icon picker built |
+| Feb 17, 2026 | 1.2 | Added Items 13–19 (Session 3 sprint): Gantt priority colours, drag-drop fix, Gantt status cycler, parent_id bug fix, double-click edit, inline subtask add, analytics hardening |
 
 ---
 
